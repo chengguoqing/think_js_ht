@@ -1,0 +1,31 @@
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+</head>
+
+<body>
+dfdsf
+
+<script src="http://lib.baomitu.com/socket.io/2.0.1/socket.io.js"></script>
+<script type="text/javascript">
+  var socket = io('http://127.0.0.1:8360/websocket/');
+
+
+
+  socket.on('opend', function(data) {
+    console.log('opend:', data);
+  });
+
+  socket.on('joined', function(data) {
+    console.log('joined:', data);
+  });
+</script>
+</body>
+
+</html>

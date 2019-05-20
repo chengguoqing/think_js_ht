@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="37px" viewBox="0 0 40 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+    <title>前端开发</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M2,0 L38,0 L38,0 C39.1045695,-4.1271253e-15 40,0.8954305 40,2 L40,10 L0,10 L0,2 L0,2 C-1.3527075e-16,0.8954305 0.8954305,2.02906125e-16 2,0 Z" id="path-1"></path>
+        <path d="M0,9 L40,9 L40,35 L40,35 C40,36.1045695 39.1045695,37 38,37 L2,37 L2,37 C0.8954305,37 1.3527075e-16,36.1045695 0,35 L0,9 Z" id="path-2"></path>
+    </defs>
+    <g id="常规发布任务" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="发布任务选择任务类型" transform="translate(-203.000000, -237.000000)">
+            <g id="Group-7">
+                <g id="Group-2" transform="translate(173.000000, 210.000000)">
+                    <g id="前端开发" transform="translate(30.000000, 27.000000)">
+                        <g id="Rectangle-2">
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                            <path stroke="#4D5373" stroke-width="1" d="M0.5,9.5 L39.5,9.5 L39.5,2 C39.5,1.17157288 38.8284271,0.5 38,0.5 L2,0.5 C1.17157288,0.5 0.5,1.17157288 0.5,2 L0.5,9.5 Z"></path>
+                        </g>
+                        <circle id="Oval-3" fill="#4D5373" cx="6" cy="5" r="1"></circle>
+                        <circle id="Oval-3" fill="#4D5373" cx="10" cy="5" r="1"></circle>
+                        <circle id="Oval-3" fill="#4D5373" cx="14" cy="5" r="1"></circle>
+                        <g id="Rectangle-3">
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-2"></use>
+                            <path stroke="#4D5373" stroke-width="1" d="M0.5,9.5 L0.5,35 C0.5,35.8284271 1.17157288,36.5 2,36.5 L38,36.5 C38.8284271,36.5 39.5,35.8284271 39.5,35 L39.5,9.5 L0.5,9.5 Z"></path>
+                        </g>
+                        <polyline id="Path-2" stroke="#4D5373" points="13.3428047 17 7 23.0695821 13.3428047 29.2674195"></polyline>
+                        <polyline id="Path-2" stroke="#4D5373" transform="translate(31.171402, 23.133710) scale(-1, 1) translate(-31.171402, -23.133710) " points="34.3428047 17 28 23.0695821 34.3428047 29.2674195"></polyline>
+                        <path d="M22.8052964,16 L18,29.2406047" id="Path-3" stroke="#4D5373"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

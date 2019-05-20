@@ -1,0 +1,15 @@
+{
+  "apps": [{
+    "name": "duxing",
+    "script": "production.js",
+    "cwd": "G:\thinkjs\duxing",
+    "exec_mode": "fork",
+    "max_memory_restart": "1G",
+    "autorestart": true,
+    "node_args": [],
+    "args": [],
+    "env": {
+      
+    }
+  }]
+}

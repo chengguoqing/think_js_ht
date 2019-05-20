@@ -1,0 +1,307 @@
+
+
+.sdd_Jh_head {
+    height: 65px;
+     min-width: 1200px;
+    background: #000;
+    text-align: center;
+    line-height: 65px;
+    font-size: 22px;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    z-index: 1000
+}
+
+.sd_jhj_d {
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    width: 140px;
+}
+
+.sd_jhdr {
+    height: 709px;
+    background: url(../img/2.jpg) no-repeat top center;
+    position: relative;
+    background-size: cover;
+    overflow: hidden;
+    margin-top: 65px;
+    min-width: 1200px;
+}
+
+.index-main {
+    /* margin-top: 260px; */
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    top: 40%;
+    /* margin-top: -180px; */
+    text-align: center;
+}
+
+.index-main h1 {
+    font-size: 42px;
+    color: #fff;
+}
+
+.line {
+    width: 280px;
+    height: 2px;
+    background: #fff;
+    margin: 2% auto 0;
+}
+
+.index-main .ani {
+    /* position: absolute; */
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 2% auto 0;
+}
+
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.btn--shockwave.is-active {
+    -webkit-animation: shockwaveJump 1s ease-out infinite;
+    animation: shockwaveJump 1s ease-out infinite;
+}
+
+.indexbtn {
+    width: 100px;
+    display: inline-block;
+    line-height: 100px;
+    background: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 32px;
+    border: none;
+    padding: 0;
+    position: relative;
+    outline: none;
+    color: #333
+}
+
+.btn--shockwave.is-active:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+    -webkit-animation: shockwave 1s .5s ease-out infinite;
+    animation: shockwave 1s .5s ease-out infinite;
+}
+
+.btn--shockwave.is-active:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+    -webkit-animation: shockwave 1s .65s ease-out infinite;
+    animation: shockwave 1s .65s ease-out infinite;
+}
+
+@-webkit-keyframes shockwave {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.55), inset 0 0 1px rgba(255, 255, 255, 0.55);
+  }
+  95% {
+    box-shadow: 0 0 50px transparent, inset 0 0 30px transparent;
+  }
+  100% {
+    -webkit-transform: scale(2.25);
+            transform: scale(2.25);
+  }
+}
+@keyframes shockwave {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.55), inset 0 0 1px rgba(255, 255, 255, 0.55);
+  }
+  95% {
+    box-shadow: 0 0 50px transparent, inset 0 0 30px transparent;
+  }
+  100% {
+    -webkit-transform: scale(2.25);
+            transform: scale(2.25);
+  }
+}
+
+@-webkit-keyframes shockwaveJump {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  40% {
+    -webkit-transform: scale(1.08);
+            transform: scale(1.08);
+  }
+  50% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+  }
+  55% {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+  60% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes shockwaveJump {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  40% {
+    -webkit-transform: scale(1.08);
+            transform: scale(1.08);
+  }
+  50% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+  }
+  55% {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+  60% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.sd_j_dert{
+    line-height: 93px;
+    height: 93px
+}
+
+.xdgf_eee span{
+    display: inline-block;
+    width: 100px;
+    height: 26px;
+    line-height: 23px;
+    text-align: center;
+    border-radius: 100px;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 14px;
+    margin-right: 23px;
+}
+
+.dsf_df_drert img{
+    width: 32px;
+    shape-inside: 32px;
+    margin-left: 20px;
+    cursor: pointer
+}
+.sd_jj_df{
+    background: #fff;
+    line-height: 30px;
+    color: #333;
+    border-radius: 8px;
+    width: 180px;
+    text-align: center;
+    color: #666;
+    position: absolute;
+    left: -55px;
+    margin: auto;
+    top: -15px;
+    opacity: 0
+}
+
+.doian_eert{
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    transform: rotate(45deg);
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    bottom: -7px;
+}
+
+
+
+
+.dsf_df_drert .f_b:hover .sd_jj_df{
+ opacity: 1
+}
+.wwe_drrtx{
+top: -250px;
+    width: 200px;
+    overflow: hidden
+}
+.wwe_drrtx img{
+    width: 100%
+}
+
+.public_foobom {
+   line-height: 74px;
+    border-top: 1px solid #313A54;
+    color: rgba(200,200,200,0.50);
+}
+
+.dx_body{
+    margin-top: 65px;
+}
+.sd_jhj_df{
+    width: 600px;
+    margin: auto;
+    padding-top: 40px;
+}
+
+
+.sd_jhj_df li{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #FAFAFA
+}
+.d_jj_dert{
+    width: 40px;
+    height: 37px;
+}
+
+
+
+.sdf_drtyxe{
+    min-height: 600px
+}
+
+
+
+
+
+

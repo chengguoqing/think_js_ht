@@ -1,0 +1,38 @@
+<style>
+/*
+    body{
+        background: #f8f8f8 !important
+    }
+*/
+</style>   
+{% include  "nav_head.html" %}
+        <div class="dx_body">
+           <div class="wd pt40">
+            
+               <div class="bgff yj4 pd pt20 pm10 ">
+                    <p class="fz18 z3 pl20">
+                    {{title}}
+                   </p>
+                   <div class=" z9 fz12 mt10 pl20 pr20">
+                       <span class="fl">发布:{{fabiaoren}}</span>
+                   <span class="fr">{{addtime}}</span>
+                       
+                       <p class="qc"></p>
+                    </div>
+                   
+                   <div class="btm mt10 pm20 sdf_drtyxe pd pt20 ">
+                        {{text | safe }}
+                   </div>
+               
+               </div>
+               
+            </div>
+            
+    </div>
+    
+    {% include  "bottom.html" %}  
+
+</body>
+
+</html>
+
