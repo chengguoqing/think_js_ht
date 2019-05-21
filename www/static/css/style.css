@@ -17,8 +17,8 @@
 .sd_jhj_d {
     position: absolute;
     left: 20px;
-    top: 15px;
-    width: 140px;
+       top: 10px;
+    width: 240px;
 }
 
 .sd_jhdr {
@@ -33,8 +33,15 @@
 
 .index-main {
     /* margin-top: 260px; */
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     position: relative;
     width: 100%;
@@ -123,9 +130,11 @@
   0% {
     -webkit-transform: scale(1);
             transform: scale(1);
+    -webkit-box-shadow: 0 0 2px rgba(255, 255, 255, 0.55), inset 0 0 1px rgba(255, 255, 255, 0.55);
     box-shadow: 0 0 2px rgba(255, 255, 255, 0.55), inset 0 0 1px rgba(255, 255, 255, 0.55);
   }
   95% {
+    -webkit-box-shadow: 0 0 50px transparent, inset 0 0 30px transparent;
     box-shadow: 0 0 50px transparent, inset 0 0 30px transparent;
   }
   100% {
@@ -137,9 +146,11 @@
   0% {
     -webkit-transform: scale(1);
             transform: scale(1);
+    -webkit-box-shadow: 0 0 2px rgba(255, 255, 255, 0.55), inset 0 0 1px rgba(255, 255, 255, 0.55);
     box-shadow: 0 0 2px rgba(255, 255, 255, 0.55), inset 0 0 1px rgba(255, 255, 255, 0.55);
   }
   95% {
+    -webkit-box-shadow: 0 0 50px transparent, inset 0 0 30px transparent;
     box-shadow: 0 0 50px transparent, inset 0 0 30px transparent;
   }
   100% {
@@ -245,6 +256,7 @@
     width: 15px;
     height: 15px;
     background: #fff;
+    -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     position: absolute;
     left: 0px;

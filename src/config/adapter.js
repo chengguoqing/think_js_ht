@@ -9,23 +9,7 @@ const {
 } = require('think-logger3');
 const path = require('path');
 const isDev = think.env === 'development';
-const socketio = require('think-websocket-socket.io');
 
-exports.websocket = {
-    type: 'socketio',
-    common: {
-        // common config
-    },
-    socketio: {
-        handle: socketio,
-        path: '/socket.io', // 默认 '/socket.io'
-        adapter: null,
-        messages: {
-            open: '/websocket/open',
-            addUser: '/websocket/addUser'
-        }
-    }
-}
 
 
 
