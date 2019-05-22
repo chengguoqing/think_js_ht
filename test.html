@@ -1,31 +1,330 @@
 
-<!doctype html>
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-    <title></title>
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <link href="https://mall.cangniaowl.com/static/css/base.css" rel="stylesheet">
+    <link href="http://img.cdn.aliyun.dcloud.net.cn/mui/dist/css/mui.min.css?v=2018-01-12%2019:32:50%20+0800" rel="stylesheet">
+    <link href="http://img.cdn.aliyun.dcloud.net.cn/mui/dist/css/mui.min.css?v=2018-01-12%2019:32:50%20+0800" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; } body { font-size: 12px; font-family: "Microsoft Yahei"; } .logo { text-align: center; padding: 15px 0; } .logo img { width: 100px; } .logo h3 { font-size: 16px; color: #3e3e3e; } .panel { background-color: #fff; border-top: 1px solid #e7e7e7; border-bottom: 1px solid #e7e7e7; margin-bottom: 10px; } .panel-hd { padding: 12px 15px; border-bottom: 1px solid #e7e7e7; } .btn { background: #09b207; display: block; padding: 10px; text-align: center; color: #fff; text-decoration: none; font-size: 13px; border-radius: 30px; margin: 15px; } .table { width: 100%; border-collapse: collapse; border: 1px solid #e7e7e7; font-size: 12px; } .table th, .table td { border: 1px solid #e7e7e7; text-align: center; padding: 10px 5px; } .table thead th { background: #f6f6f6; } .table tbody td { background: #fff; } .iconimg { width: 14px; vertical-align: middle; margin-right: 6px; } .vam { vertical-align: middle; } .dsfd_df_ert { background-repeat: no-repeat; background-size: 100% 100%; background-position: center top; position: fixed; height: 100%; width: 100%; left: 0px; top: 0px; display: none; background-image: url(https://mall.cangniaowl.com/fangwei/shareindex.png); } .dsfd_df_ert.act { display: block; z-index: 1000; } .titleimg { padding: 40px 20px; padding-bottom: 0px; } .titleimg img { width: 100%; } .hbdh img { width: 160px; } .btngif { width: 18rem; max-width: 200px; height: 5.0rem; margin: 20px auto 10px auto; background: url(/images/point/lhb.gif) no-repeat; background-size: contain; } .sd_jh_dert { position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 1000; display: none } .sd_jh_dert.act { display: block } .sd_jh_der_e { width: 250px; height: 360px; position: absolute; left: 0px; top: 0px; bottom: 0px; right: 0px; margin: auto; background: url('https://mall.cangniaowl.com/fangwei/sdfsd_s.png?v=5'); background-size: 100% 100%; } .sfd_drr p { color: #FAE204; text-align: center; padding-top: 150px; } .sfd_drr span { font-size: 60px; } .sd_jkjh_Der { height: 100px; width: 100%; margin-top: 40px; position: relative; z-index: 1000 } .sd_df_Derttx { display: none } .sd_df_Derttx.act { display: block } .sd_hgh_deetrt { position: absolute; left: 0px; width: 100%; bottom: 44px; color: #fff !important; }
+    </style>
 </head>
 
 <body>
-dfdsf
+    <section class="sd_df_Derttx act">
+        <div class="logo">
+            <img src="http://mall.cangniaowl.com/uploads/meiye//images/5ce4b1b8240d65ce4b1b8240d7.jpg" />
+            <h3 style="color:#3e3e3e; opacity:0.7; margin-top: 6px;">正品防伪查询</h3>
+        </div>
+        <div class="panel">
+            <div class="panel-hd"><img class="iconimg" src="https://mall.cangniaowl.com/fangwei/icon_001.png" /><span class="vam">验证结果【30c7c3a2c5d8b5f43261eb54f794e585】</span></div>
+            <div class="panel-bd">
+                <div style="background-color:#f6f6f6; padding: 10px; margin: 10px 15px;" id="result_context">
+                    您所查询的防伪码已被查询过64次，首次查询日期为2019-05-22 13:47:44，此密码已失效，谨防假冒！                </div>
+            </div>
+        </div>
 
-<script src="http://lib.baomitu.com/socket.io/2.0.1/socket.io.js"></script>
-<script type="text/javascript">
-  var socket = io('http://127.0.0.1:8360/websocket/');
+        <div class="panel">
+            <div class="panel-hd"><img class="iconimg" src="https://mall.cangniaowl.com/fangwei/icon_002.png" /><span class="vam">查询记录</span></div>
+            <div class="panel-bd">
+                <div style="padding:10px 15px;">
+                    <table class="table" id="more_table">
+                        <thead>
+                            <tr>
+                                <th>时间</th>
+
+                                <th>查询次数</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2019-05-22 16:57</td>
+                                <td>64</td>
+                            <tr>
+                                <td>2019-05-22 16:56</td>
+                                <td>63</td>
+                            <tr>
+                                <td>2019-05-22 16:56</td>
+                                <td>62</td>
+                            <tr>
+                                <td>2019-05-22 16:56</td>
+                                <td>61</td>
+                            <tr>
+                                <td>2019-05-22 16:56</td>
+                                <td>60</td>
+                            <tr>
+                                <td>2019-05-22 16:56</td>
+                                <td>59</td>
+                            <tr>
+                                <td>2019-05-22 16:56</td>
+                                <td>58</td>
+                            <tr>
+                                <td>2019-05-22 16:56</td>
+                                <td>57</td>
+                            <tr>
+                                <td>2019-05-22 16:56</td>
+                                <td>56</td>
+                            <tr>
+                                <td>2019-05-22 16:56</td>
+                                <td>55</td>
+                            <tr>
+                                <td>2019-05-22 16:56</td>
+                                <td>54</td>
+                            <tr>
+                                <td>2019-05-22 16:53</td>
+                                <td>53</td>
+                            <tr>
+                                <td>2019-05-22 16:51</td>
+                                <td>52</td>
+                            <tr>
+                                <td>2019-05-22 16:51</td>
+                                <td>51</td>
+                            <tr>
+                                <td>2019-05-22 16:50</td>
+                                <td>50</td>
+                            <tr>
+                                <td>2019-05-22 16:50</td>
+                                <td>49</td>
+                            <tr>
+                                <td>2019-05-22 16:50</td>
+                                <td>48</td>
+                            <tr>
+                                <td>2019-05-22 16:50</td>
+                                <td>47</td>
+                            <tr>
+                                <td>2019-05-22 16:50</td>
+                                <td>46</td>
+                            <tr>
+                                <td>2019-05-22 16:49</td>
+                                <td>45</td>
+                            <tr>
+                                <td>2019-05-22 16:49</td>
+                                <td>44</td>
+                            <tr>
+                                <td>2019-05-22 16:49</td>
+                                <td>43</td>
+                            <tr>
+                                <td>2019-05-22 16:49</td>
+                                <td>42</td>
+                            <tr>
+                                <td>2019-05-22 16:49</td>
+                                <td>41</td>
+                            <tr>
+                                <td>2019-05-22 16:49</td>
+                                <td>40</td>
+                            <tr>
+                                <td>2019-05-22 16:49</td>
+                                <td>39</td>
+                            <tr>
+                                <td>2019-05-22 16:47</td>
+                                <td>38</td>
+                            <tr>
+                                <td>2019-05-22 16:47</td>
+                                <td>37</td>
+                            <tr>
+                                <td>2019-05-22 16:46</td>
+                                <td>36</td>
+                            <tr>
+                                <td>2019-05-22 16:45</td>
+                                <td>35</td>
+                            <tr>
+                                <td>2019-05-22 16:45</td>
+                                <td>34</td>
+                            <tr>
+                                <td>2019-05-22 16:44</td>
+                                <td>33</td>
+                            <tr>
+                                <td>2019-05-22 16:44</td>
+                                <td>32</td>
+                            <tr>
+                                <td>2019-05-22 16:43</td>
+                                <td>31</td>
+                            <tr>
+                                <td>2019-05-22 16:43</td>
+                                <td>30</td>
+                            <tr>
+                                <td>2019-05-22 16:42</td>
+                                <td>29</td>
+                            <tr>
+                                <td>2019-05-22 16:42</td>
+                                <td>28</td>
+                            <tr>
+                                <td>2019-05-22 16:42</td>
+                                <td>27</td>
+                            <tr>
+                                <td>2019-05-22 16:41</td>
+                                <td>26</td>
+                            <tr>
+                                <td>2019-05-22 16:41</td>
+                                <td>25</td>
+                            <tr>
+                                <td>2019-05-22 16:40</td>
+                                <td>24</td>
+                            <tr>
+                                <td>2019-05-22 16:40</td>
+                                <td>23</td>
+                            <tr>
+                                <td>2019-05-22 16:40</td>
+                                <td>22</td>
+                            <tr>
+                                <td>2019-05-22 16:40</td>
+                                <td>21</td>
+                            <tr>
+                                <td>2019-05-22 16:40</td>
+                                <td>20</td>
+                            <tr>
+                                <td>2019-05-22 16:40</td>
+                                <td>19</td>
+                            <tr>
+                                <td>2019-05-22 16:40</td>
+                                <td>18</td>
+                            <tr>
+                                <td>2019-05-22 16:38</td>
+                                <td>17</td>
+                            <tr>
+                                <td>2019-05-22 16:38</td>
+                                <td>16</td>
+                            <tr>
+                                <td>2019-05-22 16:37</td>
+                                <td>15</td>
+                            <tr>
+                                <td>2019-05-22 16:37</td>
+                                <td>14</td>
+                            <tr>
+                                <td>2019-05-22 16:37</td>
+                                <td>13</td>
+                            <tr>
+                                <td>2019-05-22 16:37</td>
+                                <td>12</td>
+                            <tr>
+                                <td>2019-05-22 16:36</td>
+                                <td>11</td>
+                            <tr>
+                                <td>2019-05-22 16:36</td>
+                                <td>10</td>
+                            <tr>
+                                <td>2019-05-22 16:36</td>
+                                <td>9</td>
+                            <tr>
+                                <td>2019-05-22 16:35</td>
+                                <td>8</td>
+                            <tr>
+                                <td>2019-05-22 16:33</td>
+                                <td>7</td>
+                            <tr>
+                                <td>2019-05-22 16:32</td>
+                                <td>6</td>
+                            <tr>
+                                <td>2019-05-22 16:24</td>
+                                <td>5</td>
+                            <tr>
+                                <td>2019-05-22 16:23</td>
+                                <td>4</td>
+                            <tr>
+                                <td>2019-05-22 16:22</td>
+                                <td>3</td>
+                            <tr>
+                                <td>2019-05-22 15:09</td>
+                                <td>2</td>
+                            <tr>
+                                <td>2019-05-22 13:47</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="ljf">
+
+            <a style="display:block; margin:10px;"><img src="https://mall.cangniaowl.com/fangwei/ljfbtn.png" style="width:100%; " class="sd_ddff_ert" /></a>
+        </div>
+    </section>
+
+    <section class="dsfd_df_ert ">
+
+
+        <div class="titleimg">
+            <img src="https://mall.cangniaowl.com/fangwei/hdimg06.png">
+        </div>
+        <div class="hbdh cen mt40">
+            <img src="https://mall.cangniaowl.com/fangwei/sss.png">
+        </div>
+
+
+        <div class="btngif" id="sd_jh_der" style="background-image: url('http://rp.onlyid.cn/images/point/lhb.gif')"></div>
+
+
+        <section class="sd_jh_dert">
+            <section class="sd_jh_der_e">
+                <section class="sfd_drr">
+                    <p class="fz16"><span id="sd_dert"></span> 积分</p>
+
+                    <section class="sd_jkjh_Der">
+
+                    </section>
+                    <p class="sd_hgh_deetrt">此积分由【云步空间】发送</p>
+                </section>
+            </section>
+
+        </section>
+
+
+    </section>
+    <script src="https://mall.cangniaowl.com/static/js/jquery-1.11.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mui/3.7.1/js/mui.min.js"></script>
+    <script>
+        document.getElementById("sd_jh_der").onclick = function() {
+            ajax_s("https://api.cangniaowl.com/v1/fangwei/jifen", {
+                token: "167cMDJx6KineV2dIa0s4h8o9Y3GAwmWshop_261",
+                code: "30c7c3a2c5d8b5f43261eb54f794e585",
+                id: 66            }, function(data) {
+                if (data.return_code == "SUCESS") { //成功
+                    $("#sd_dert").text(50);//弹窗显示了多少积分
+                    document.querySelector(".sd_jh_dert").classList.add("act");
+                } else {
+                    mui.alert(data.return_msg);
+                }
+            })
+
+        }
+        document.querySelector(".sd_jkjh_Der").onclick = function() {
+            document.querySelector(".sd_jh_dert").classList.remove("act");
+        }
+
+        document.querySelector(".sd_ddff_ert").onclick = function() {
+            document.querySelector(".sd_df_Derttx").classList.remove("act");
+            document.querySelector(".dsfd_df_ert").classList.add("act");
+        }
 
 
 
-  socket.on('opend', function(data) {
-    console.log('opend:', data);
-  });
 
-  socket.on('joined', function(data) {
-    console.log('joined:', data);
-  });
-</script>
+
+
+        function ajax_s(url, data_d, call) {
+            $.ajax({
+                type: 'POST',
+                url: url,
+                data: data_d,
+                contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+                dataType: 'json',
+                success: function(data) {
+                    call(data)
+                },
+                error: function(res) {
+                     mui.alert("请求失败"); 
+                }
+            });
+
+        }
+    </script>
+
+
+
 </body>
-
 </html>
+

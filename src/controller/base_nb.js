@@ -1,15 +1,16 @@
 //type=1 添加 2修改  3查看 4删除 
 var crypto = require('crypto');
 var key = "duxinggongchengguoqingguangzoulg"
+var xml2js = require('xml2js');
 module.exports = class extends think.Controller {
     __before() {
-        
-//        if (this.ctx.url != "/admin/loadin" && !this.cookie('user_id')) {
-//            return this.fail({
-//                code: -1,
-//                msg: "登录过期请重新登录"
-//            }); //2输出json 推荐
-//        }
+
+        //        if (this.ctx.url != "/admin/loadin" && !this.cookie('user_id')) {
+        //            return this.fail({
+        //                code: -1,
+        //                msg: "登录过期请重新登录"
+        //            }); //2输出json 推荐
+        //        }
 
     }
     // 调用示列 sd_der= await this.add_action('fenlei', date_s,{name:date_s.name})
@@ -70,17 +71,17 @@ module.exports = class extends think.Controller {
                 user_name: ['like', `%${cz_er.user_name||""}%`]
             }).countSelect();
         } else if (cz_er.page) { //有分页的查询
-            data = await model.page(cz_er.page,cz_er.yema||10).order('id DESC').countSelect();
+            data = await model.page(cz_er.page, cz_er.yema || 10).order('id DESC').countSelect();
         } else if (cz_er.id) { //根据id查询的
             data = await model.where({
                 id: cz_er.id
             }).find();
         }
         console.log(JSON.stringify(cz_er));
-        var sd_ddf={}
-        sd_ddf.code=0
-        sd_ddf.msg="success"
-        sd_ddf.data=this.encryption(JSON.stringify(data))
+        var sd_ddf = {}
+        sd_ddf.code = 0
+        sd_ddf.msg = "success"
+        sd_ddf.data = this.encryption(JSON.stringify(data))
         return sd_ddf
     }
 
@@ -101,7 +102,7 @@ module.exports = class extends think.Controller {
         }
         return jhde; //2输出json 推荐
     }
-//加密
+    //加密
     encryption(data, iv) {
         iv = iv || "";
         var clearEncoding = 'utf8';
@@ -130,6 +131,33 @@ module.exports = class extends think.Controller {
         cipherChunks.push(decipher.final(clearEncoding));
         return cipherChunks.join('');
     }
+
+    //    随便机数
+    randomString(len) {
+        len = len || 32;
+        var $chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678'; /****默认去掉了容易混淆的字符oOLl,9gq,Vv,Uu,I1****/
+        var maxPos = $chars.length;
+        var pwd = '';
+        for (var i = 0; i < len; i++) {
+            pwd += $chars.charAt(Math.floor(Math.random() * maxPos));
+        }
+        return pwd;
+    }
+    zx(data) {
+        var stringA = Object.keys(data),
+            s_sdfs = ""
+        //    stringA.sort()
+        stringA.map(function (a) {
+            s_sdfs += "&" + a + "=" + data[a]
+        })
+        s_sdfs = s_sdfs.substring(1, s_sdfs.length)
+        return s_sdfs
+    }
+    buildXML(json) {
+        var builder = new xml2js.Builder();
+        return builder.buildObject(json);
+    };
+
 
 
 };
