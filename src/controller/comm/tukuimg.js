@@ -21,8 +21,9 @@ module.exports = class extends Base {
         msg_d.data = {
             url: url_e
         }
+        console.log(url_e);
 
-        const model = this.model('imgKu');
+        const model = this.model('dxtupian');
         let imgKu={}
         imgKu.name=file.name
         imgKu.path=url_e

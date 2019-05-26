@@ -12,8 +12,14 @@
   },
   "dependencies": {
     "@koa/cors": "^2.2.3",
+    "canvas": "^2.5.0",
     "cos-nodejs-sdk-v5": "^2.5.9",
+    "gm": "^1.23.1",
+    "graphicsmagick": "^0.0.1",
+    "images": "^3.0.2",
     "md5": "^2.2.1",
+    "memory-cache": "^0.2.0",
+    "phantom": "^6.2.0",
     "tencentyun": "^2.0.4",
     "think-cache": "^1.0.0",
     "think-cache-file": "^1.0.8",
@@ -27,6 +33,7 @@
     "think-websocket": "^1.0.6",
     "thinkjs": "^3.0.0",
     "ueditor": "^1.2.3",
+    "webshot": "^0.18.0",
     "xml2js": "^0.4.19"
   },
   "devDependencies": {

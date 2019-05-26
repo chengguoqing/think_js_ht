@@ -16,7 +16,7 @@ exports.test_up = function (name_e, call_back) {
         SecretId: secretId,
         SecretKey: secretKey,
     });
-
+ 
     var name_w = "public/uploads/" + name_e
     cos.sliceUploadFile({
         Bucket: 'duxinggj-2018-1251133427',
@@ -46,7 +46,30 @@ exports.test_up_etr = function (name_e, path, call_back) {
     })
 }
 
-
+exports.test_san= function (name_e, path, call_back) {
+    var cos = new COS({
+        SecretId: secretId,
+        SecretKey: secretKey,
+    });
+    console.log(path);
+      console.log(66666666);
+    return new Promise((resolve, reject) => {
+        cos.putObject({
+            Bucket: 'duxinggj-2018-1251133427',
+            Region: 'ap-guangzhou',
+            ContentLength:path.length,
+            Key: name_e,
+            Body: path,
+            onProgress:function(e){
+                console.log(e);
+            } 
+        }, function (err, data) {
+            console.log(err);
+            console.log(data);
+            resolve("https://" + data.Location);
+        });
+    })
+}
 
 
 

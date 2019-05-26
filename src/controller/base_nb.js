@@ -2,9 +2,11 @@
 var crypto = require('crypto');
 var key = "duxinggongchengguoqingguangzoulg"
 var xml2js = require('xml2js');
+
 module.exports = class extends think.Controller {
     __before() {
 
+            this.assign('base_url', 'https://duxinggj.com/www/static/');
         //        if (this.ctx.url != "/admin/loadin" && !this.cookie('user_id')) {
         //            return this.fail({
         //                code: -1,
@@ -157,6 +159,13 @@ module.exports = class extends think.Controller {
         var builder = new xml2js.Builder();
         return builder.buildObject(json);
     };
+
+    wcf() {
+        var ssr_dr = {}
+        ssr_dr.appId = "wx30f2eb708506f491"
+        ssr_dr.secret = '189e0d0d1ccb64c1d81650f5782b1048'
+        return ssr_dr
+    }
 
 
 

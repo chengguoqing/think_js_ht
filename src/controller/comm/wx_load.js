@@ -1,7 +1,7 @@
 const Base = require('../base_nb.js');
 var request = require('request');
 var appid = "wx30f2eb708506f491",
-    secret = "62f7139e7b7df7f69bdd0b330b60c8b3"
+    secret = "189e0d0d1ccb64c1d81650f5782b1048"
 
 //微信登录获取openid
 module.exports = class extends Base {
