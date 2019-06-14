@@ -145,6 +145,21 @@ module.exports = class extends think.Controller {
         }
         return pwd;
     }
+     
+       //    随便机数
+    randomString_wei() {
+       var len = 8;
+        var $chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678'; /****默认去掉了容易混淆的字符oOLl,9gq,Vv,Uu,I1****/
+        var maxPos = $chars.length;
+        var pwd = '';
+        for (var i = 0; i < len; i++) {
+            pwd += $chars.charAt(Math.floor(Math.random() * maxPos));
+        }
+        pwd+=new Date().getTime()
+        return pwd;
+    }
+    
+    
     zx(data) {
         var stringA = Object.keys(data),
             s_sdfs = ""

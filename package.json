@@ -19,6 +19,7 @@
     "images": "^3.0.2",
     "md5": "^2.2.1",
     "memory-cache": "^0.2.0",
+    "node-webshot": "^1.0.3",
     "phantom": "^6.2.0",
     "tencentyun": "^2.0.4",
     "think-cache": "^1.0.0",
@@ -33,6 +34,7 @@
     "think-websocket": "^1.0.6",
     "thinkjs": "^3.0.0",
     "ueditor": "^1.2.3",
+    "webpage": "^0.3.0",
     "webshot": "^0.18.0",
     "xml2js": "^0.4.19"
   },

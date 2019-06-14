@@ -64,9 +64,11 @@ CREATE TABLE `dxtupian` (
   `path` text collate utf8_bin,
   `addTime` char(99) collate utf8_bin default NULL,
   KEY `id` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 /*Data for the table `dxtupian` */
+
+insert  into `dxtupian`(`id`,`name`,`path`,`addTime`) values (1,'QQ图片20181010165508.jpg','https://duxinggj-2018-1251133427.cos.ap-guangzhou.myqcloud.com/3db65175-af5e-4059-9e8a-817624d0da0b.jpg','1560491507945'),(2,'未标题-1.jpg','https://duxinggj-2018-1251133427.cos.ap-guangzhou.myqcloud.com/59073d4e-6cc0-4917-96e1-3e3836bb46a2.jpg','1560492022505');
 
 /*Table structure for table `fenlei` */
 
@@ -135,12 +137,14 @@ CREATE TABLE `user_info` (
   `user_paw` char(20) collate utf8_bin default NULL,
   `dengji` int(6) default NULL COMMENT '等级',
   `addtime` char(20) collate utf8_bin default NULL COMMENT '添加时间',
+  `token` text collate utf8_bin,
+  `userId` char(99) collate utf8_bin default NULL,
   KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 /*Data for the table `user_info` */
 
-insert  into `user_info`(`id`,`touxiang`,`user_name`,`user_paw`,`dengji`,`addtime`) values (16,'https://duxinggj-2018-1251133427.cos.ap-guangzhou.myqcloud.com/587b2e19-2819-4769-906d-0b096538db60.jpg','o665p','kiss1001',1,'1557589126932');
+insert  into `user_info`(`id`,`touxiang`,`user_name`,`user_paw`,`dengji`,`addtime`,`token`,`userId`) values (19,'https://duxinggj-2018-1251133427.cos.ap-guangzhou.myqcloud.com/3db65175-af5e-4059-9e8a-817624d0da0b.jpg','admin','kiss1001',1,'1560491993939','i/UDpVbUii7H68UrDKSC34u2Ri7Rb6n5n7uDdYjsPMLa1gIAFyWMqY2Zpdu1dABOvfknNcF5mPRAqFML58DWLIQorZttt1ZxmnlI/2Cx/Lu/JTH+jlENZg==','Hhjp5EGa1560491964083'),(20,'https://duxinggj-2018-1251133427.cos.ap-guangzhou.myqcloud.com/59073d4e-6cc0-4917-96e1-3e3836bb46a2.jpg','o665p','kiss1001',1,'1560492031615','C7f+Mab+H2oaCfSlIhrs18ctkK5+kIBWk+e1aIlS7RVDnCv70Gz30DHxckZz4sy1ZPEBatTnuC8Th29RMzHRgYoTqheE8hWOOFc8l4Ni67q1gL8tBwzZ5Q==','hp4a25Ze1560492031615');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
