@@ -1,17 +1,23 @@
 const Base = require('../base_nb.js');
+var request = require('request');
 import config from "../config.js"
 
 //添加分类
 module.exports = class extends Base {
     async indexAction() {
-       
-   var sd_der= await config.register("5153","独行工匠33","http://7xogjk.com1.z0.glb.clouddn.com/IuDkFprSQ1493563384017406982")
-console.log(sd_der);
-        return this.fail(sd_der); //2输出json 推荐
-
+        this.ctx.type = 'text/plain; charset=utf-8';
+        this.body = 'hello world!';
     }
 
 
 
 
+
+    get_url(location) {
+        return new Promise((resolve, reject) => {
+            request('https://m.huobi.br.com/zh-cn/', function (error, resp, json) {
+                resolve(json);
+            })
+        })
+    }
 };

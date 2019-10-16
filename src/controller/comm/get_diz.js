@@ -1,5 +1,5 @@
 const Base = require('../base_nb.js');
-var request = require('request');
+var request = require('request'); 
 //根据经纬度获取地址 
 module.exports = class extends Base {
     async indexAction() {
