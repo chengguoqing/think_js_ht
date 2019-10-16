@@ -2,7 +2,7 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 
 const area = require('../../util/area.js');
 const Base = require('../base.js');
-//获取省市区  默认获取省  type==1 获取市 2为区
+// 获取省市区  默认获取省  type==1 获取市 2为区
 module.exports = class extends Base {
     indexAction() {
         var _this = this;
