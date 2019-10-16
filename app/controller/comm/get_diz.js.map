@@ -1,0 +1,42 @@
+{
+    "version": 3,
+    "sources": [
+        "..\\..\\..\\src\\controller\\comm\\get_diz.js"
+    ],
+    "names": [
+        "Base",
+        "require",
+        "request",
+        "module",
+        "exports",
+        "indexAction",
+        "date_s",
+        "ctx",
+        "post",
+        "JSON",
+        "parse",
+        "decryption",
+        "token",
+        "assr_d",
+        "get_url",
+        "location",
+        "sd_ddf",
+        "code",
+        "msg",
+        "data",
+        "encryption",
+        "stringify",
+        "fail",
+        "Promise",
+        "resolve",
+        "reject",
+        "error",
+        "resp",
+        "json"
+    ],
+    "mappings": ";;AAAA,MAAMA,OAAOC,QAAQ,eAAR,CAAb;AACA,IAAIC,UAAUD,QAAQ,SAAR,CAAd;AACA;AACAE,OAAOC,OAAP,GAAiB,cAAcJ,IAAd,CAAmB;AAC1BK,eAAN,GAAoB;AAAA;;AAAA;AAChB,gBAAIC,SAAS,MAAKC,GAAL,CAASC,IAAT,EAAb;AACAF,qBAASG,KAAKC,KAAL,CAAW,MAAKC,UAAL,CAAgBL,OAAOM,KAAvB,CAAX,CAAT;AACA,gBAAIC,SAAS,MAAM,MAAKC,OAAL,CAAaR,OAAOS,QAApB,CAAnB;;AAEA,gBAAIC,SAAS,EAAb;AACAA,mBAAOC,IAAP,GAAc,CAAd;AACAD,mBAAOE,GAAP,GAAa,SAAb;AACAF,mBAAOG,IAAP,GAAc,MAAKC,UAAL,CAAgBX,KAAKY,SAAL,CAAeR,MAAf,CAAhB,CAAd;;AAGA,mBAAO,MAAKS,IAAL,CAAUN,MAAV,CAAP,CAXgB,CAWU;AAXV;AAanB;AACDF,YAAQC,QAAR,EAAkB;AACd,eAAO,IAAIQ,OAAJ,CAAY,CAACC,OAAD,EAAUC,MAAV,KAAqB;AACpCvB,oBAAQ,4FAA4Fa,QAA5F,GAAuG,8DAA/G,EAA+K,UAAUW,KAAV,EAAiBC,IAAjB,EAAuBC,IAAvB,EAA6B;AACxMJ,wBAAQf,KAAKC,KAAL,CAAWkB,IAAX,CAAR;AACH,aAFD;AAGH,SAJM,CAAP;AAKH;;AArB+B,CAApC",
+    "file": "..\\..\\..\\src\\controller\\comm\\get_diz.js",
+    "sourcesContent": [
+        "const Base = require('../base_nb.js');\r\nvar request = require('request'); \r\n//根据经纬度获取地址 \r\nmodule.exports = class extends Base {\r\n    async indexAction() {\r\n        var date_s = this.ctx.post()\r\n        date_s = JSON.parse(this.decryption(date_s.token))\r\n        var assr_d = await this.get_url(date_s.location)\r\n\r\n        var sd_ddf = {}\r\n        sd_ddf.code = 0\r\n        sd_ddf.msg = \"success\"\r\n        sd_ddf.data = this.encryption(JSON.stringify(assr_d))\r\n\r\n\r\n        return this.fail(sd_ddf); //2输出json 推荐\r\n\r\n    }\r\n    get_url(location) {\r\n        return new Promise((resolve, reject) => {\r\n            request('http://restapi.amap.com/v3/geocode/regeo?key=1ca50beb27f893268297a00cdb0acdf3&location=' + location + '&poitype=&radius=1000&extensions=all&batch=false&roadlevel=0', function (error, resp, json) {\r\n                resolve(JSON.parse(json));\r\n            })\r\n        })\r\n    }\r\n\r\n};\r\n"
+    ]
+}

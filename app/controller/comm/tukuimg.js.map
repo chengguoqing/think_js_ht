@@ -1,0 +1,51 @@
+{
+    "version": 3,
+    "sources": [
+        "..\\..\\..\\src\\controller\\comm\\tukuimg.js"
+    ],
+    "names": [
+        "Base",
+        "require",
+        "tengxun_sc",
+        "fs",
+        "path",
+        "rename",
+        "think",
+        "promisify",
+        "module",
+        "exports",
+        "indexAction",
+        "file",
+        "file_name",
+        "uuid",
+        "extname",
+        "name",
+        "filePath",
+        "join",
+        "ROOT_PATH",
+        "mkdir",
+        "dirname",
+        "urk_dd",
+        "url_e",
+        "test_up_etr",
+        "msg_d",
+        "code",
+        "msg",
+        "data",
+        "url",
+        "console",
+        "log",
+        "model",
+        "imgKu",
+        "addTime",
+        "Date",
+        "getTime",
+        "add",
+        "fail"
+    ],
+    "mappings": ";;AAAA,MAAMA,OAAOC,QAAQ,YAAR,CAAb;AACA,MAAMC,aAAaD,QAAQ,0BAAR,CAAnB;AACA,MAAME,KAAKF,QAAQ,IAAR,CAAX;AACA,MAAMG,OAAOH,QAAQ,MAAR,CAAb;AACA,MAAMI,SAASC,MAAMC,SAAN,CAAgBJ,GAAGE,MAAnB,EAA2BF,EAA3B,CAAf,C,CAA+C;;AAE/C;AACAK,OAAOC,OAAP,GAAiB,cAAcT,IAAd,CAAmB;AAC1BU,eAAN,GAAoB;AAAA;;AAAA;AAChB;AACA,kBAAMC,OAAO,MAAKA,IAAL,CAAU,OAAV,CAAb;AACA,gBAAIC,YAAYN,MAAMO,IAAN,KAAeT,KAAKU,OAAL,CAAaH,KAAKI,IAAlB,CAA/B;AACA,kBAAMC,WAAWZ,KAAKa,IAAL,CAAUX,MAAMY,SAAhB,EAA2B,oBAAoBN,SAA/C,CAAjB;AACAN,kBAAMa,KAAN,CAAYf,KAAKgB,OAAL,CAAaJ,QAAb,CAAZ;AACA,kBAAMX,OAAOM,KAAKP,IAAZ,EAAkBY,QAAlB,CAAN;AACA,gBAAIK,SAAS,oBAAoBT,SAAjC;AACA,gBAAIU,QAAQ,MAAMpB,WAAWqB,WAAX,CAAuBX,SAAvB,EAAkCS,MAAlC,CAAlB;AACA,gBAAIG,QAAQ,EAAZ;AACAA,kBAAMC,IAAN,GAAa,CAAb;AACAD,kBAAME,GAAN,GAAY,MAAZ;AACAF,kBAAMG,IAAN,GAAa;AACTC,qBAAKN;AADI,aAAb;AAGAO,oBAAQC,GAAR,CAAYR,KAAZ;;AAEA,kBAAMS,QAAQ,MAAKA,KAAL,CAAW,UAAX,CAAd;AACA,gBAAIC,QAAM,EAAV;AACAA,kBAAMjB,IAAN,GAAWJ,KAAKI,IAAhB;AACAiB,kBAAM5B,IAAN,GAAWkB,KAAX;AACAU,kBAAMC,OAAN,GAAc,IAAIC,IAAJ,GAAWC,OAAX,EAAd;AACA,kBAAMJ,MAAMK,GAAN,CAAUJ,KAAV,CAAN;;AAGA,kBAAKK,IAAL,CAAUb,KAAV;AAzBgB;AA0BnB;;AA3B+B,CAApC",
+    "file": "..\\..\\..\\src\\controller\\comm\\tukuimg.js",
+    "sourcesContent": [
+        "const Base = require('../base.js');\r\nconst tengxun_sc = require('../../util/tengxun_sc.js');\r\nconst fs = require('fs');\r\nconst path = require('path');\r\nconst rename = think.promisify(fs.rename, fs); // 通过 promisify 方法把 rename 方法包装成 Promise 接口\r\n\r\n//图库图片\r\nmodule.exports = class extends Base {\r\n    async indexAction() {\r\n        //         this.file('image').name\r\n        const file = this.file('image');  \r\n        var file_name = think.uuid() + path.extname(file.name)\r\n        const filePath = path.join(think.ROOT_PATH, \"runtime/upload/\" + file_name);\r\n        think.mkdir(path.dirname(filePath));\r\n        await rename(file.path, filePath);\r\n        var urk_dd = \"runtime/upload/\" + file_name\r\n        var url_e = await tengxun_sc.test_up_etr(file_name, urk_dd)  \r\n        var msg_d = {}\r\n        msg_d.code = 0\r\n        msg_d.msg = \"上传成功\" \r\n        msg_d.data = {\r\n            url: url_e\r\n        }\r\n        console.log(url_e);\r\n\r\n        const model = this.model('dxtupian');\r\n        let imgKu={}\r\n        imgKu.name=file.name\r\n        imgKu.path=url_e\r\n        imgKu.addTime=new Date().getTime()\r\n        await model.add(imgKu);\r\n\r\n\r\n        this.fail(msg_d);\r\n    }\r\n\r\n};\r\n"
+    ]
+}

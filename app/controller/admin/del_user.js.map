@@ -1,0 +1,29 @@
+{
+    "version": 3,
+    "sources": [
+        "..\\..\\..\\src\\controller\\admin\\del_user.js"
+    ],
+    "names": [
+        "Base",
+        "require",
+        "module",
+        "exports",
+        "indexAction",
+        "model",
+        "affectedRows",
+        "where",
+        "id",
+        "ctx",
+        "post",
+        "delete",
+        "jhde",
+        "code",
+        "msg",
+        "fail"
+    ],
+    "mappings": ";;AAAA,MAAMA,OAAOC,QAAQ,YAAR,CAAb;AACA;AACAC,OAAOC,OAAP,GAAiB,cAAcH,IAAd,CAAmB;AAC1BI,eAAN,GAAoB;AAAA;;AAAA;AAChB,kBAAMC,QAAQ,MAAKA,KAAL,CAAW,WAAX,CAAd;AACA,gBAAIC,eAAe,MAAMD,MAAME,KAAN,CAAY;AACjCC,oBAAI,MAAKC,GAAL,CAASC,IAAT,CAAc,IAAd;AAD6B,aAAZ,EAEtBC,MAFsB,EAAzB;AAGA,gBAAIC,OAAO,EAAX;AACA,gBAAIN,gBAAgB,CAApB,EAAuB;AACnBM,qBAAKC,IAAL,GAAY,CAAZ;AACAD,qBAAKE,GAAL,GAAW,QAAX;AAGH,aALD,MAKO;AACHF,qBAAKC,IAAL,GAAY,CAAC,CAAb;AACAD,qBAAKE,GAAL,GAAW,QAAX;AACH;AACD,mBAAO,MAAKC,IAAL,CAAUH,IAAV,CAAP,CAfgB,CAeQ;AAfR;AAiBnB;;AAlB+B,CAApC",
+    "file": "..\\..\\..\\src\\controller\\admin\\del_user.js",
+    "sourcesContent": [
+        "const Base = require('../base.js');\r\n//删除管理员\r\nmodule.exports = class extends Base {\r\n    async indexAction() {\r\n        const model = this.model('user_info');\r\n        let affectedRows = await model.where({\r\n            id: this.ctx.post(\"id\")\r\n        }).delete();\r\n        var jhde = {}\r\n        if (affectedRows == 1) {\r\n            jhde.code = 0\r\n            jhde.msg = \"删除账号成功\"\r\n\r\n\r\n        } else {\r\n            jhde.code = -1\r\n            jhde.msg = \"删除账号失败\"\r\n        }\r\n        return this.fail(jhde); //2输出json 推荐\r\n\r\n    }\r\n\r\n};\r\n"
+    ]
+}

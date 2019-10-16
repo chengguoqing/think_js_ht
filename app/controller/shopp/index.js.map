@@ -1,0 +1,50 @@
+{
+    "version": 3,
+    "sources": [
+        "..\\..\\..\\src\\controller\\shopp\\index.js"
+    ],
+    "names": [
+        "module",
+        "exports",
+        "think",
+        "Controller",
+        "__before",
+        "ctx",
+        "url",
+        "cookie",
+        "fail",
+        "code",
+        "msg",
+        "console",
+        "log",
+        "add_action",
+        "m_eel",
+        "cz_er",
+        "leisd",
+        "model",
+        "jhde",
+        "result",
+        "type",
+        "thenAdd",
+        "add",
+        "xg_action",
+        "where",
+        "id",
+        "update",
+        "get_action",
+        "data",
+        "page",
+        "name",
+        "order",
+        "countSelect",
+        "find",
+        "del_action",
+        "affectedRows",
+        "delete"
+    ],
+    "mappings": "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",
+    "file": "..\\..\\..\\src\\controller\\shopp\\index.js",
+    "sourcesContent": [
+        "//type=1 添加 2修改  3查看 4删除 \r\nmodule.exports = class extends think.Controller {\r\n    __before() {\r\n        //console.log(this.cookie('user_id'));\r\n        if (this.ctx.url != \"/admin/loadin\" && !this.cookie('user_id')) {\r\n            return this.fail({\r\n                code: -1,\r\n                msg: \"登录过期请重新登录\"\r\n            }); //2输出json 推荐\r\n        }\r\n        console.log();\r\n\r\n    }\r\n    // 调用示列 sd_der= await this.add_action('fenlei', date_s,{name:date_s.name})\r\n    async add_action(m_eel, cz_er, leisd) {\r\n        var model = this.model(m_eel);\r\n        var jhde = {}\r\n        var result = \"\"\r\n        delete cz_er.type\r\n        if (leisd) { //有条件的话就不能添加重复的\r\n            result = await model.thenAdd(cz_er, leisd);\r\n        } else {\r\n            result = await model.add(cz_er);\r\n        }\r\n        if (result.type == \"exist\") { //已存在\r\n            jhde.code = -1\r\n            jhde.msg = '添加失败，请勿重复添加'\r\n        } else {\r\n            jhde.code = 0\r\n            jhde.msg = '添加成功'\r\n        }\r\n        return jhde\r\n\r\n    }\r\n\r\n    async xg_action(m_eel, cz_er, leisd) {\r\n        var model = this.model(m_eel);\r\n        var jhde = {}\r\n        var result = \"\"\r\n        delete cz_er.type\r\n        result = await model.where({\r\n            id: cz_er.id\r\n        }).update(cz_er);\r\n        if (result.type == \"exist\") { //已存在\r\n            jhde.code = -1\r\n            jhde.msg = '修改失败'\r\n        } else {\r\n            jhde.code = 0\r\n            jhde.msg = '修改成功'\r\n        }\r\n        return jhde\r\n\r\n    }\r\n\r\n\r\n    // 调用示列  sd_der = await this.get_action('fenlei', date_s)\r\n    async get_action(m_eel, cz_er, leisd) {\r\n        var model = this.model(m_eel);\r\n        var jhde = {}\r\n        var data = \"\"\r\n        delete cz_er.type\r\n        if (cz_er.page && cz_er.name) { //有分页的查询 且有分页查询\r\n            console.log(2);\r\n            data = await model.page(cz_er.page).order('id DESC').where({\r\n                name: ['like', `%${cz_er.name||\"\"}%`]\r\n            }).countSelect();\r\n        } else if (cz_er.page) { //有分页的查询\r\n            console.log(1);\r\n            data = await model.page(cz_er.page).order('id DESC').countSelect();\r\n        } else if (cz_er.id) { //根据id查询的\r\n            console.log(3);\r\n            data = await model.where({\r\n                id: cz_er.id\r\n            }).find();\r\n        }\r\n        return data\r\n    }\r\n\r\n    //    删除\r\n    async del_action(m_eel, cz_er) {\r\n        var model = this.model(m_eel);\r\n        delete cz_er.type\r\n        let affectedRows = await model.where({\r\n            id: cz_er.id\r\n        }).delete();\r\n        var jhde = {}\r\n        if (affectedRows == 1) {\r\n            jhde.code = 0\r\n            jhde.msg = \"删除成功\"\r\n        } else {\r\n            jhde.code = -1\r\n            jhde.msg = \"删除失败\"\r\n        }\r\n        return jhde; //2输出json 推荐\r\n    }\r\n\r\n};\r\n"
+    ]
+}

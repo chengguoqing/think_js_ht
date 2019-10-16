@@ -1,0 +1,44 @@
+{
+    "version": 3,
+    "sources": [
+        "..\\..\\..\\src\\controller\\admin\\index.js"
+    ],
+    "names": [
+        "Base",
+        "require",
+        "module",
+        "exports",
+        "indexAction",
+        "date_s",
+        "ctx",
+        "post",
+        "JSON",
+        "parse",
+        "decryption",
+        "token",
+        "addtime",
+        "Date",
+        "getTime",
+        "sd_der",
+        "type",
+        "user_id",
+        "randomString_wei",
+        "config",
+        "register",
+        "user_name",
+        "touxiang",
+        "userId",
+        "console",
+        "log",
+        "add_action",
+        "xg_action",
+        "get_action",
+        "del_action",
+        "fail"
+    ],
+    "mappings": "AACA;;;;;;;;AADA,MAAMA,OAAOC,QAAQ,eAAR,CAAb;;AAEA;AACAC,OAAOC,OAAP,GAAiB,cAAcH,IAAd,CAAmB;AAC1BI,eAAN,GAAoB;AAAA;;AAAA;AAChB,gBAAIC,SAAS,MAAKC,GAAL,CAASC,IAAT,EAAb;AACAF,qBAASG,KAAKC,KAAL,CAAW,MAAKC,UAAL,CAAgBL,OAAOM,KAAvB,CAAX,CAAT;AACAN,mBAAOO,OAAP,GAAiB,IAAIC,IAAJ,GAAWC,OAAX,EAAjB;AACA,gBAAIC,SAAS,EAAb;AACA,gBAAIV,OAAOW,IAAP,IAAe,CAAnB,EAAsB;AAClB,oBAAIC,UAAU,MAAKC,gBAAL,EAAd;;AAEA,oBAAIH,SAAS,MAAMI,iBAAOC,QAAP,CAAgBH,OAAhB,EAAyBZ,OAAOgB,SAAhC,EAA2ChB,OAAOiB,QAAlD,CAAnB;AACAjB,uBAAOM,KAAP,GAAeI,OAAOJ,KAAtB;AACAN,uBAAOkB,MAAP,GAAgBN,OAAhB;AACCO,wBAAQC,GAAR,CAAYpB,MAAZ;AACDU,yBAAS,MAAM,MAAKW,UAAL,CAAgB,WAAhB,EAA6BrB,MAA7B,EAAqC;AAChDgB,+BAAWhB,OAAOgB;AAD8B,iBAArC,CAAf;AAGH,aAVD,MAUO,IAAIhB,OAAOW,IAAP,IAAe,CAAnB,EAAsB;AACzBD,yBAAS,MAAM,MAAKY,SAAL,CAAe,WAAf,EAA4BtB,MAA5B,CAAf;AACH,aAFM,MAEA,IAAIA,OAAOW,IAAP,IAAe,CAAnB,EAAsB;AACzBD,yBAAS,MAAM,MAAKa,UAAL,CAAgB,WAAhB,EAA6BvB,MAA7B,CAAf;AAEH,aAHM,MAGA,IAAIA,OAAOW,IAAP,IAAe,CAAnB,EAAsB;AACzBD,yBAAS,MAAM,MAAKc,UAAL,CAAgB,WAAhB,EAA6BxB,MAA7B,CAAf;AACH;AACD,mBAAO,MAAKyB,IAAL,CAAUf,MAAV,CAAP,CAvBgB,CAuBU;AAvBV;AAyBnB;;AA1B+B,CAApC",
+    "file": "..\\..\\..\\src\\controller\\admin\\index.js",
+    "sourcesContent": [
+        "const Base = require('../base_nb.js');\r\nimport config from \"../config.js\"\r\n//添加用户\r\nmodule.exports = class extends Base {\r\n    async indexAction() {\r\n        var date_s = this.ctx.post()\r\n        date_s = JSON.parse(this.decryption(date_s.token))\r\n        date_s.addtime = new Date().getTime()\r\n        var sd_der = \"\"\r\n        if (date_s.type == 1) {\r\n            var user_id = this.randomString_wei()\r\n           \r\n            var sd_der = await config.register(user_id, date_s.user_name, date_s.touxiang)\r\n            date_s.token = sd_der.token\r\n            date_s.userId = user_id\r\n             console.log(date_s);\r\n            sd_der = await this.add_action('user_info', date_s, {\r\n                user_name: date_s.user_name\r\n            })\r\n        } else if (date_s.type == 2) {\r\n            sd_der = await this.xg_action('user_info', date_s)\r\n        } else if (date_s.type == 3) {\r\n            sd_der = await this.get_action('user_info', date_s)\r\n\r\n        } else if (date_s.type == 4) {\r\n            sd_der = await this.del_action('user_info', date_s)\r\n        }\r\n        return this.fail(sd_der); //2输出json 推荐\r\n\r\n    }\r\n\r\n};\r\n"
+    ]
+}

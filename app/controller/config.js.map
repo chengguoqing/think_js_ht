@@ -1,0 +1,32 @@
+{
+    "version": 3,
+    "sources": [
+        "..\\..\\src\\controller\\config.js"
+    ],
+    "names": [
+        "RongSDK",
+        "require",
+        "appkey",
+        "secret",
+        "module",
+        "exports",
+        "register",
+        "id",
+        "name",
+        "portrait",
+        "call",
+        "Promise",
+        "resolve",
+        "reject",
+        "User",
+        "user",
+        "then",
+        "result",
+        "error"
+    ],
+    "mappings": "AAAA,IAAIA,UAAUC,QAAQ,eAAR,EAAyB;AACnCC,YAAQ,eAD2B;AAEnCC,YAAQ;AAF2B,CAAzB,CAAd;;AAKAC,OAAOC,OAAP,GAAiB;AACbC,aAASC,EAAT,EAAaC,IAAb,EAAmBC,QAAnB,EAA6BC,IAA7B,EAAmC;AAAE;AACjC,eAAO,IAAIC,OAAJ,CAAY,CAACC,OAAD,EAAUC,MAAV,KAAqB;;AAEpC;AACA,gBAAIC,OAAOd,QAAQc,IAAnB;AACA,gBAAIC,OAAO;AACPR,oBAAIA,EADG;AAEPC,sBAAMA,IAFC;AAGPC,0BAAUA;AAHH,aAAX;AAKAK,iBAAKR,QAAL,CAAcS,IAAd,EAAoBC,IAApB,CAAyBC,UAAU;AAC/BL,wBAAQK,MAAR;AACH,aAFD,EAEGC,SAAS;AACTN,wBAAQM,KAAR;AACF,aAJD;AAKH,SAdM,CAAP;AAgBH;AAlBY,CAAjB",
+    "file": "..\\..\\src\\controller\\config.js",
+    "sourcesContent": [
+        "var RongSDK = require('rongcloud-sdk')({\r\n    appkey: 'tdrvipkstxtp5',\r\n    secret: 'o057FyMRaa'\r\n});\r\n\r\nmodule.exports = {\r\n    register(id, name, portrait, call) { //注册\r\n        return new Promise((resolve, reject) => {\r\n\r\n            // API 文档: http://www.rongcloud.cn/docs/server/sdk/user/user.html#register\r\n            var User = RongSDK.User;\r\n            var user = {\r\n                id: id,\r\n                name: name,\r\n                portrait: portrait\r\n            };\r\n            User.register(user).then(result => {\r\n                resolve(result);\r\n            }, error => {\r\n               resolve(error);\r\n            });\r\n        })\r\n\r\n    }\r\n}\r\n"
+    ]
+}

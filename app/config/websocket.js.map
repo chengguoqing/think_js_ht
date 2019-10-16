@@ -1,0 +1,23 @@
+{
+    "version": 3,
+    "sources": [
+        "..\\..\\src\\config\\websocket.js"
+    ],
+    "names": [
+        "on",
+        "type",
+        "allow_origin",
+        "adp",
+        "undefined",
+        "path",
+        "messages",
+        "open",
+        "close",
+        "adduser"
+    ],
+    "mappings": ";kBAAe;AACXA,QAAI,IADO,EACD;AACVC,UAAM,WAFK,EAEQ;AACnBC,kBAAc,EAHH,EAGO;AAClBC,SAAKC,SAJM,EAIK;AAChBC,UAAM,YALK,EAKS;AACpBC,cAAU;AACNC,cAAM,oBADA,EACsB;AAC5BC,eAAO,qBAFD,EAEwB;AAC9BC,iBAAS,uBAHH,CAG4B;AAH5B;AANC,C",
+    "file": "..\\..\\src\\config\\websocket.js",
+    "sourcesContent": [
+        "export default {\r\n    on: true, //是否开启 WebSocket\r\n    type: 'socket.io', //使用的 WebSocket 库类型，默认为 socket.io\r\n    allow_origin: '', //允许的 origin\r\n    adp: undefined, // socket 存储的 adapter，socket.io 下使用\r\n    path: '/socket.io', //url path for websocket\r\n    messages: {\r\n        open: 'home/socketio/open', // WebSocket 建立连接时处理的 Action\r\n        close: 'home/socketio/close', // WebSocket 关闭时处理的 Action\r\n        adduser: 'home/socketio/adduser', //adduser 事件处理的 Action\r\n    }\r\n};\r\n"
+    ]
+}

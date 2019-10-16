@@ -1,0 +1,20 @@
+{
+    "version": 3,
+    "sources": [
+        "..\\..\\..\\src\\controller\\websocket\\addUser.js"
+    ],
+    "names": [
+        "Base",
+        "require",
+        "module",
+        "exports",
+        "indexAction",
+        "emit",
+        "wsData"
+    ],
+    "mappings": "AAAA,MAAMA,OAAOC,QAAQ,YAAR,CAAb;AACA;AACAC,OAAOC,OAAP,GAAiB,cAAcH,IAAd,CAAmB;AAC/BI,iBAAc;AAClB,WAAKC,IAAL,CAAU,OAAV,EAAmB,KAAKC,MAAxB;AACI;AAH+B,CAApC",
+    "file": "..\\..\\..\\src\\controller\\websocket\\addUser.js",
+    "sourcesContent": [
+        "const Base = require('./index.js');\r\n//上传图片\r\nmodule.exports = class extends Base {\r\n     indexAction() {\r\n this.emit('opend', this.wsData)\r\n    }\r\n};\r\n"
+    ]
+}

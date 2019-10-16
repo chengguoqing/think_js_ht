@@ -1,0 +1,30 @@
+{
+    "version": 3,
+    "sources": [
+        "..\\..\\..\\src\\controller\\nongyun\\test_e.js"
+    ],
+    "names": [
+        "Base",
+        "require",
+        "request",
+        "module",
+        "exports",
+        "indexAction",
+        "ctx",
+        "type",
+        "body",
+        "get_url",
+        "location",
+        "Promise",
+        "resolve",
+        "reject",
+        "error",
+        "resp",
+        "json"
+    ],
+    "mappings": "AAEA;;;;;;;;AAFA,MAAMA,OAAOC,QAAQ,eAAR,CAAb;AACA,IAAIC,UAAUD,QAAQ,SAAR,CAAd;;;AAGA;AACAE,OAAOC,OAAP,GAAiB,cAAcJ,IAAd,CAAmB;AAC1BK,eAAN,GAAoB;AAAA;;AAAA;AAChB,kBAAKC,GAAL,CAASC,IAAT,GAAgB,2BAAhB;AACA,kBAAKC,IAAL,GAAY,cAAZ;AAFgB;AAGnB;;AAMDC,YAAQC,QAAR,EAAkB;AACd,eAAO,IAAIC,OAAJ,CAAY,CAACC,OAAD,EAAUC,MAAV,KAAqB;AACpCX,oBAAQ,+BAAR,EAAyC,UAAUY,KAAV,EAAiBC,IAAjB,EAAuBC,IAAvB,EAA6B;AAClEJ,wBAAQI,IAAR;AACH,aAFD;AAGH,SAJM,CAAP;AAKH;AAhB+B,CAApC",
+    "file": "..\\..\\..\\src\\controller\\nongyun\\test_e.js",
+    "sourcesContent": [
+        "const Base = require('../base_nb.js');\r\nvar request = require('request');\r\nimport config from \"../config.js\"\r\n\r\n//添加分类\r\nmodule.exports = class extends Base {\r\n    async indexAction() {\r\n        this.ctx.type = 'text/plain; charset=utf-8';\r\n        this.body = 'hello world!';\r\n    }\r\n\r\n\r\n\r\n\r\n\r\n    get_url(location) {\r\n        return new Promise((resolve, reject) => {\r\n            request('https://m.huobi.br.com/zh-cn/', function (error, resp, json) {\r\n                resolve(json);\r\n            })\r\n        })\r\n    }\r\n};\r\n"
+    ]
+}

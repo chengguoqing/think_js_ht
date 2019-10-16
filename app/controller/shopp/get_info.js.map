@@ -1,0 +1,24 @@
+{
+    "version": 3,
+    "sources": [
+        "..\\..\\..\\src\\controller\\shopp\\get_info.js"
+    ],
+    "names": [
+        "Base",
+        "require",
+        "module",
+        "exports",
+        "indexAction",
+        "model",
+        "data",
+        "where",
+        "id",
+        "find",
+        "fail"
+    ],
+    "mappings": ";;AAAA,MAAMA,OAAOC,QAAQ,YAAR,CAAb;AACA;AACAC,OAAOC,OAAP,GAAiB,cAAcH,IAAd,CAAmB;AAC1BI,eAAN,GAAoB;AAAA;;AAAA;AAChB,gBAAIC,QAAQ,MAAKA,KAAL,CAAW,MAAX,CAAZ;AACA,gBAAIC,OAAO,MAAMD,MAAME,KAAN,CAAY;AACzBC,oBAAI;AADqB,aAAZ,EAEdC,IAFc,EAAjB;;AAIA,mBAAO,MAAKC,IAAL,CAAU,EAACJ,MAAKA,IAAN,EAAV,CAAP,CANgB,CAMe;AANf;AAQnB;;AAT+B,CAApC",
+    "file": "..\\..\\..\\src\\controller\\shopp\\get_info.js",
+    "sourcesContent": [
+        "const Base = require('../base.js');\r\n//获取店铺信息\r\nmodule.exports = class extends Base {\r\n    async indexAction() {\r\n        let model = this.model('dpxx');\r\n        let data = await model.where({\r\n            id: 1\r\n        }).find();\r\n\r\n        return this.fail({data:data}); //2输出json 推荐\r\n\r\n    }\r\n\r\n};\r\n"
+    ]
+}

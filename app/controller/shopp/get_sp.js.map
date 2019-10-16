@@ -1,0 +1,32 @@
+{
+    "version": 3,
+    "sources": [
+        "..\\..\\..\\src\\controller\\shopp\\get_sp.js"
+    ],
+    "names": [
+        "Base",
+        "require",
+        "module",
+        "exports",
+        "indexAction",
+        "model",
+        "data",
+        "ctx",
+        "post",
+        "where",
+        "id",
+        "find",
+        "spt",
+        "split",
+        "page",
+        "order",
+        "name",
+        "countSelect",
+        "fail"
+    ],
+    "mappings": ";;AAAA,MAAMA,OAAOC,QAAQ,YAAR,CAAb;AACA;AACAC,OAAOC,OAAP,GAAiB,cAAcH,IAAd,CAAmB;AAC1BI,eAAN,GAAoB;AAAA;;AAAA;AAChB,gBAAIC,QAAQ,MAAKA,KAAL,CAAW,MAAX,CAAZ;AACA,gBAAIC,OAAO,EAAX;;AAEA,gBAAI,MAAKC,GAAL,CAASC,IAAT,CAAc,IAAd,CAAJ,EAAyB;AACrBF,uBAAO,MAAMD,MAAMI,KAAN,CAAY;AACrBC,wBAAI,MAAKH,GAAL,CAASC,IAAT,CAAc,IAAd;AADiB,iBAAZ,EAEVG,IAFU,EAAb;AAGDL,qBAAKM,GAAL,GAAUN,KAAKM,GAAL,CAASC,KAAT,CAAe,GAAf,CAAV;AACF,aALD,MAKO;AACHP,uBAAO,MAAMD,MAAMS,IAAN,CAAW,MAAKP,GAAL,CAASC,IAAT,CAAc,MAAd,CAAX,EAAkCO,KAAlC,CAAwC,SAAxC,EAAmDN,KAAnD,CAAyD;AAClEO,0BAAM,CAAC,MAAD,EAAU,IAAG,MAAKT,GAAL,CAASC,IAAT,CAAc,MAAd,KAAuB,EAAG,GAAvC;AAD4D,iBAAzD,EAEVS,WAFU,EAAb;AAGH;;AAED,mBAAO,MAAKC,IAAL,CAAUZ,IAAV,CAAP,CAfgB,CAeQ;AAfR;AAiBnB;;AAlB+B,CAApC",
+    "file": "..\\..\\..\\src\\controller\\shopp\\get_sp.js",
+    "sourcesContent": [
+        "const Base = require('../base.js');\r\n//获取用户列表\r\nmodule.exports = class extends Base {\r\n    async indexAction() {\r\n        let model = this.model('spxq');\r\n        let data = \"\"\r\n\r\n        if (this.ctx.post('id')) {\r\n            data = await model.where({\r\n                id: this.ctx.post('id')\r\n            }).find();\r\n           data.spt= data.spt.split(\",\")\r\n        } else {\r\n            data = await model.page(this.ctx.post('page')).order('id DESC').where({\r\n                name: ['like', `%${this.ctx.post('name')||\"\"}%`]\r\n            }).countSelect();\r\n        }\r\n \r\n        return this.fail(data); //2输出json 推荐\r\n\r\n    }\r\n\r\n};\r\n"
+    ]
+}

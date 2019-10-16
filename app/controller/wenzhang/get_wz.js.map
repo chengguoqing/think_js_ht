@@ -1,0 +1,34 @@
+{
+    "version": 3,
+    "sources": [
+        "..\\..\\..\\src\\controller\\wenzhang\\get_wz.js"
+    ],
+    "names": [
+        "Base",
+        "require",
+        "module",
+        "exports",
+        "indexAction",
+        "model",
+        "data",
+        "ctx",
+        "post",
+        "where",
+        "id",
+        "find",
+        "field",
+        "join",
+        "table",
+        "as",
+        "on",
+        "page",
+        "order",
+        "countSelect",
+        "fail"
+    ],
+    "mappings": ";;AAAA,MAAMA,OAAOC,QAAQ,YAAR,CAAb;AACA;AACAC,OAAOC,OAAP,GAAiB,cAAcH,IAAd,CAAmB;AAC1BI,eAAN,GAAoB;AAAA;;AAAA;AAChB,gBAAIC,QAAQ,MAAKA,KAAL,CAAW,SAAX,CAAZ;AACA,gBAAIC,OAAO,EAAX;AACA,gBAAI,MAAKC,GAAL,CAASC,IAAT,CAAc,IAAd,CAAJ,EAAyB;AACrBF,uBAAO,MAAMD,MAAMI,KAAN,CAAY;AACrBC,wBAAI,MAAKH,GAAL,CAASC,IAAT,CAAc,IAAd;AADiB,iBAAZ,EAEVG,IAFU,EAAb;AAGH,aAJD,MAIO;AACHL,uBAAO,MAAMD,MAAMO,KAAN,CAAY,sDAAZ,EAAoEC,IAApE,CAAyE;AAClFC,2BAAO,WAD2E;AAElFD,0BAAM,OAF4E,EAEnE;AACfE,wBAAI,GAH8E,EAGzE;AACTC,wBAAI,CAAC,QAAD,EAAW,IAAX,CAJ8E,CAI7D;AAJ6D,iBAAzE,EAKVC,IALU,CAKL,MAAKV,GAAL,CAASC,IAAT,CAAc,MAAd,CALK,EAKkBU,KALlB,CAKwB,SALxB,EAKmCC,WALnC,EAAb;AAMH;;AAED,mBAAO,MAAKC,IAAL,CAAUd,IAAV,CAAP,CAhBgB,CAgBQ;AAhBR;AAiBnB;;AAlB+B,CAApC",
+    "file": "..\\..\\..\\src\\controller\\wenzhang\\get_wz.js",
+    "sourcesContent": [
+        "const Base = require('../base.js');\r\n//获取文章\r\nmodule.exports = class extends Base {\r\n    async indexAction() {\r\n        let model = this.model('article');\r\n        let data = \"\"\r\n        if (this.ctx.post('id')) {\r\n            data = await model.where({\r\n                id: this.ctx.post('id')\r\n            }).find();\r\n        } else {\r\n            data = await model.field('article.id,article.title,article.addtime,c.user_name').join({\r\n                table: 'user_info',\r\n                join: 'inner', //join 方式，有 left, right, inner 3 种方式\r\n                as: 'c', // 表别名\r\n                on: ['userId', 'id'] //ON 条件\r\n            }).page(this.ctx.post('page')).order('id DESC').countSelect()\r\n        }\r\n\r\n        return this.fail(data); //2输出json 推荐\r\n    }\r\n\r\n}\r\n"
+    ]
+}

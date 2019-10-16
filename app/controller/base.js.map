@@ -1,0 +1,25 @@
+{
+    "version": 3,
+    "sources": [
+        "..\\..\\src\\controller\\base.js"
+    ],
+    "names": [
+        "module",
+        "exports",
+        "think",
+        "Controller",
+        "__before",
+        "ctx",
+        "url",
+        "cookie",
+        "indexOf",
+        "fail",
+        "code",
+        "msg"
+    ],
+    "mappings": "AAAAA,OAAOC,OAAP,GAAiB,cAAcC,MAAMC,UAApB,CAA+B;AAC9CC,aAAW;AACP,QAAG,KAAKC,GAAL,CAASC,GAAT,IAAc,eAAd,IAA+B,CAAC,KAAKC,MAAL,CAAY,SAAZ,CAAhC,IAAwD,KAAKF,GAAL,CAASC,GAAT,CAAaE,OAAb,CAAqB,QAArB,IAA+B,CAA1F,EAA4F;AACtF,aAAO,KAAKC,IAAL,CAAU,EAACC,MAAK,CAAC,CAAP,EAASC,KAAI,WAAb,EAAV,CAAP,CADsF,CACzC;AAClD;AACJ;AAL6C,CAAhD",
+    "file": "..\\..\\src\\controller\\base.js",
+    "sourcesContent": [
+        "module.exports = class extends think.Controller {\n  __before() {\n      if(this.ctx.url!=\"/admin/loadin\"&&!this.cookie('user_id')&&this.ctx.url.indexOf(\"public\")<0){\n            return this.fail({code:-1,msg:\"登录过期请重新登录\"}); //2输出json 推荐\n      }\n  }\n};\n"
+    ]
+}

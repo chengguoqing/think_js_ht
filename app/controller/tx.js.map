@@ -1,0 +1,21 @@
+{
+    "version": 3,
+    "sources": [
+        "..\\..\\src\\controller\\tx.js"
+    ],
+    "names": [
+        "module",
+        "exports",
+        "think",
+        "Controller",
+        "constructor",
+        "arg",
+        "__before",
+        "assign"
+    ],
+    "mappings": "AAAAA,OAAOC,OAAP,GAAiB,cAAcC,MAAMC,UAApB,CAA+B;AAC5CC,gBAAY,GAAGC,GAAf,EAAoB;AAChB,cAAM,GAAGA,GAAT;AACH;AACDC,eAAW;;AAEP,aAAKC,MAAL,CAAY,UAAZ,EAAwB,+BAAxB;AACH;AAP2C,CAAhD",
+    "file": "..\\..\\src\\controller\\tx.js",
+    "sourcesContent": [
+        "module.exports = class extends think.Controller {\r\n    constructor(...arg) {\r\n        super(...arg);\r\n    }\r\n    __before() {\r\n\r\n        this.assign('base_url', 'http://127.0.0.1:8360/static/');\r\n    }\r\n};\r\n"
+    ]
+}

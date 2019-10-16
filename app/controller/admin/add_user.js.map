@@ -1,0 +1,29 @@
+{
+    "version": 3,
+    "sources": [
+        "..\\..\\..\\src\\controller\\admin\\add_user.js"
+    ],
+    "names": [
+        "Base",
+        "require",
+        "module",
+        "exports",
+        "indexAction",
+        "model",
+        "result",
+        "thenAdd",
+        "ctx",
+        "post",
+        "user_name",
+        "jhde",
+        "type",
+        "code",
+        "msg",
+        "fail"
+    ],
+    "mappings": ";;AAAA,MAAMA,OAAOC,QAAQ,YAAR,CAAb;AACA;AACAC,OAAOC,OAAP,GAAiB,cAAcH,IAAd,CAAmB;AAC1BI,eAAN,GAAoB;AAAA;;AAAA;AAChB,kBAAMC,QAAQ,MAAKA,KAAL,CAAW,WAAX,CAAd;AACA,kBAAMC,SAAS,MAAMD,MAAME,OAAN,CAAc,MAAKC,GAAL,CAASC,IAAT,EAAd,EAA+B;AAChDC,2BAAW,MAAKF,GAAL,CAASC,IAAT,CAAc,WAAd;AADqC,aAA/B,CAArB;AAGA,gBAAIE,OAAO,EAAX;AACA,gBAAIL,OAAOM,IAAP,IAAe,OAAnB,EAA4B;AAAE;AAC1BD,qBAAKE,IAAL,GAAY,CAAC,CAAb;AACAF,qBAAKG,GAAL,GAAW,cAAX;AACH,aAHD,MAGO;AACHH,qBAAKE,IAAL,GAAY,CAAZ;AACAF,qBAAKG,GAAL,GAAW,QAAX;AACH;AACD,mBAAO,MAAKC,IAAL,CAAUJ,IAAV,CAAP,CAbgB,CAaQ;AAbR;AAenB;;AAhB+B,CAApC",
+    "file": "..\\..\\..\\src\\controller\\admin\\add_user.js",
+    "sourcesContent": [
+        "const Base = require('../base.js');\r\n//添加管理员\r\nmodule.exports = class extends Base {\r\n    async indexAction() {\r\n        const model = this.model('user_info');\r\n        const result = await model.thenAdd(this.ctx.post(), {\r\n            user_name: this.ctx.post('user_name')\r\n        });\r\n        var jhde = {}\r\n        if (result.type == \"exist\") { //已存在\r\n            jhde.code = -1\r\n            jhde.msg = \"账号已存在，请勿重复添加\"\r\n        } else {\r\n            jhde.code = 0\r\n            jhde.msg = \"账号添加成功\"\r\n        }\r\n        return this.fail(jhde); //2输出json 推荐\r\n\r\n    }\r\n\r\n};\r\n"
+    ]
+}

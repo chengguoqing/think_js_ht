@@ -1,0 +1,35 @@
+{
+    "version": 3,
+    "sources": [
+        "..\\..\\..\\src\\controller\\admin\\xg_user.js"
+    ],
+    "names": [
+        "Base",
+        "require",
+        "module",
+        "exports",
+        "indexAction",
+        "model",
+        "sd_ddf",
+        "ctx",
+        "post",
+        "s_xig_s",
+        "touxiang",
+        "user_name",
+        "user_paw",
+        "dengji",
+        "affectedRows",
+        "where",
+        "id",
+        "update",
+        "jhde",
+        "code",
+        "msg",
+        "fail"
+    ],
+    "mappings": ";;AAAA,MAAMA,OAAOC,QAAQ,YAAR,CAAb;AACA;AACAC,OAAOC,OAAP,GAAiB,cAAcH,IAAd,CAAmB;AAC1BI,eAAN,GAAoB;AAAA;;AAAA;AAChB,kBAAMC,QAAQ,MAAKA,KAAL,CAAW,WAAX,CAAd;AACA,gBAAIC,SAAS,MAAKC,GAAL,CAASC,IAAT,EAAb;AAAA,gBACIC,UAAU,EADd;AAEAA,oBAAQC,QAAR,GAAmBJ,OAAOI,QAA1B;AACAD,oBAAQE,SAAR,GAAoBL,OAAOK,SAA3B;AACAF,oBAAQG,QAAR,GAAmBN,OAAOM,QAA1B;AACAH,oBAAQI,MAAR,GAAiBP,OAAOO,MAAxB;AACA,gBAAIC,eAAe,MAAMT,MAAMU,KAAN,CAAY;AACjCC,oBAAIV,OAAOU;AADsB,aAAZ,EAEtBC,MAFsB,CAEfR,OAFe,CAAzB;;AAIA,gBAAIS,OAAO,EAAX;AACA,gBAAIJ,gBAAgB,CAApB,EAAuB;AACnBI,qBAAKC,IAAL,GAAY,CAAZ;AACAD,qBAAKE,GAAL,GAAW,QAAX;AAGH,aALD,MAKO;AACHF,qBAAKC,IAAL,GAAY,CAAC,CAAb;AACAD,qBAAKE,GAAL,GAAW,QAAX;AACH;AACD,mBAAO,MAAKC,IAAL,CAAUH,IAAV,CAAP,CAtBgB,CAsBQ;AAtBR;AAwBnB;;AAzB+B,CAApC",
+    "file": "..\\..\\..\\src\\controller\\admin\\xg_user.js",
+    "sourcesContent": [
+        "const Base = require('../base.js');\r\n//修改管理员\r\nmodule.exports = class extends Base {\r\n    async indexAction() {\r\n        const model = this.model('user_info');\r\n        var sd_ddf = this.ctx.post(),\r\n            s_xig_s = {}\r\n        s_xig_s.touxiang = sd_ddf.touxiang\r\n        s_xig_s.user_name = sd_ddf.user_name\r\n        s_xig_s.user_paw = sd_ddf.user_paw\r\n        s_xig_s.dengji = sd_ddf.dengji\r\n        let affectedRows = await model.where({\r\n            id: sd_ddf.id\r\n        }).update(s_xig_s);\r\n\r\n        var jhde = {}\r\n        if (affectedRows == 1) {\r\n            jhde.code = 0\r\n            jhde.msg = \"修改账号成功\"\r\n\r\n\r\n        } else {\r\n            jhde.code = -1\r\n            jhde.msg = \"修改账号失败\"\r\n        }\r\n        return this.fail(jhde); //2输出json 推荐\r\n\r\n    }\r\n\r\n};\r\n"
+    ]
+}

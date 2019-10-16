@@ -1,0 +1,25 @@
+{
+    "version": 3,
+    "sources": [
+        "..\\..\\..\\src\\controller\\xiaochengxu\\jietu.js"
+    ],
+    "names": [
+        "Base",
+        "require",
+        "webshot",
+        "module",
+        "exports",
+        "indexAction",
+        "options",
+        "screenSize",
+        "width",
+        "height",
+        "shotSize",
+        "err"
+    ],
+    "mappings": ";;AAAA,MAAMA,OAAOC,QAAQ,eAAR,CAAb;AACA,IAAIC,UAAUD,QAAQ,SAAR,CAAd;AACA;AACAE,OAAOC,OAAP,GAAiB,cAAcJ,IAAd,CAAmB;;AAE1BK,eAAN,GAAoB;AAAA;AAChB,gBAAIC,UAAU;AACVC,4BAAY;AACRC,2BAAO,GADC;AAERC,4BAAQ;AAFA,iBADF;AAKVC,0BAAU;AACNF,2BAAO,GADD;AAENC,4BAAQ;AAFF;AALA,aAAd;AAUAP,oBAAQ,4CAAR,EAAsD,YAAtD,EAAoEI,OAApE,EAA6E,UAAUK,GAAV,EAAe,CAAG;;AAE9F,aAFD;AAXgB;AAgBnB;;AAlB+B,CAApC",
+    "file": "..\\..\\..\\src\\controller\\xiaochengxu\\jietu.js",
+    "sourcesContent": [
+        "const Base = require('../base_nb.js');\r\nvar webshot = require('webshot')\r\n//添加分类\r\nmodule.exports = class extends Base {\r\n\r\n    async indexAction() {\r\n        var options = { \r\n            screenSize: {  \r\n                width: 375 ,\r\n                height: 660  \r\n            },\r\n            shotSize: {  \r\n                width: 375 ,\r\n                height: '660' \r\n            }\r\n        };  \r\n        webshot('https://api.cangniaowl.com/shop/230.html#/', 'flickr.png', options, function (err) {  // screenshot now saved to flickr.jpeg \r\n      \r\n        });\r\n\r\n\r\n    }\r\n\r\n}\r\n"
+    ]
+}

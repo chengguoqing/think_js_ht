@@ -1,0 +1,35 @@
+{
+    "version": 3,
+    "sources": [
+        "..\\..\\src\\config\\middleware.js"
+    ],
+    "names": [
+        "path",
+        "require",
+        "isDev",
+        "think",
+        "env",
+        "cors",
+        "module",
+        "exports",
+        "handle",
+        "options",
+        "logRequest",
+        "sendResponseTime",
+        "uploadDir",
+        "join",
+        "ROOT_PATH",
+        "enable",
+        "root",
+        "publicPath",
+        "isCli",
+        "debug",
+        "keepExtensions",
+        "limit"
+    ],
+    "mappings": "AAAA,MAAMA,OAAOC,QAAQ,MAAR,CAAb;AACA,MAAMC,QAAQC,MAAMC,GAAN,KAAc,aAA5B;AACA,MAAMC,OAAOJ,QAAQ,WAAR,CAAb;AACAK,OAAOC,OAAP,GAAiB,CACb;AACIC,YAAQ,MADZ;AAEIC,aAAS;AACLC,oBAAYR,KADP;AAELS,0BAAkBT;AAFb;AAFb,CADa,EAQb;AACIM,YAAQH,IADZ;AAEII,aAAS;AAFb,CARa,EAYb;AACID,YAAQ,SADZ;AAEIC,aAAS;AACLG,mBAAWZ,KAAKa,IAAL,CAAUV,MAAMW,SAAhB,EAA2B,cAA3B;AADN;AAFb,CAZa,EAkBb;AACIN,YAAQ,MADZ;AAEIC,aAAS;AACLC,oBAAYR,KADP;AAELS,0BAAkBT;AAFb;AAFb,CAlBa,EAyBb;AACIM,YAAQ,UADZ;AAEIO,YAAQb,KAFZ;AAGIO,aAAS;AACLO,cAAMhB,KAAKa,IAAL,CAAUV,MAAMW,SAAhB,EAA2B,KAA3B,CADD;AAELG,oBAAY;AAFP;AAHb,CAzBa,EAiCb;AACIT,YAAQ,OADZ;AAEIO,YAAQ,CAACZ,MAAMe,KAFnB;AAGIT,aAAS;AACLU,eAAOjB;AADF;AAHb,CAjCa,EAwCb;AACIM,YAAQ,SADZ;AAEIC,aAAS;AACLW,wBAAgB,IADX;AAELC,eAAO;AAFF;AAFb,CAxCa,EA+Cb;AACIb,YAAQ,QADZ;AAEIC,aAAS;AAFb,CA/Ca,EAmDf,OAnDe,EAoDf,YApDe,CAAjB",
+    "file": "..\\..\\src\\config\\middleware.js",
+    "sourcesContent": [
+        "const path = require('path');\nconst isDev = think.env === 'development';\nconst cors = require('@koa/cors');\nmodule.exports = [\n    {\n        handle: 'meta',\n        options: {\n            logRequest: isDev,\n            sendResponseTime: isDev\n        }\n  },\n    {\n        handle: cors,\n        options: {} \n  },\n    {\n        handle: 'payload',\n        options: {\n            uploadDir: path.join(think.ROOT_PATH, 'runtime/data')\n        }\n    },\n    {\n        handle: 'meta',\n        options: {\n            logRequest: isDev,\n            sendResponseTime: isDev\n        }\n  },\n    {\n        handle: 'resource',\n        enable: isDev,\n        options: {\n            root: path.join(think.ROOT_PATH, 'www'),\n            publicPath: /^\\/(static|favicon\\.ico)/\n        }\n  },\n    {\n        handle: 'trace',\n        enable: !think.isCli,\n        options: {\n            debug: isDev\n        }\n  },\n    {\n        handle: 'payload',\n        options: {\n            keepExtensions: true,\n            limit: '5mb'\n        }\n  },\n    {\n        handle: 'router',\n        options: {}\n  },\n  'logic',\n  'controller'\n];\n"
+    ]
+}
