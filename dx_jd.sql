@@ -28,11 +28,11 @@ CREATE TABLE `article` (
   `fabiaoren` char(99) collate utf8_bin default NULL COMMENT '用户id',
   `liulan` int(11) default NULL COMMENT '浏览数量',
   KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 /*Data for the table `article` */
 
-insert  into `article`(`id`,`title`,`text`,`addtime`,`fabiaoren`,`liulan`) values (10,'店铺发布商品后台类目所含的子类目','<p><span style=\"font-size: 14px;\">选错类目会影响：</span></p><p><span style=\"font-size: 14px;\">1：影响商品转化率&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p><p><span style=\"font-size: 14px;\">2：影响店铺交易额&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p><p><span style=\"font-size: 14px;\">3：影响分销商品市场搜索精准率&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p><p><span style=\"font-size: 14px;\">4：影响分销商品市场商品曝光度&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p><p><span style=\"font-size: 14px;\">为了避免大家发错或不确定所发布商品对应的后台大类目，下表列举当前后台类目所包含的明细子类目（举例说明：我要发布苹果这类商品，苹果属于水果，水果又被包含在食品这个大类目下，那么发布商品选择的对应后台类目就是食品），请参照发布。</span></p><p><br/></p><p style=\"text-align: center;\"><span style=\"font-size: 14px;\">另：如有新增或调整，我们会第一时间更新！</span></p><p style=\"text-align: center;\"><span style=\"font-size: 14px;\">点击图片可查看大图</span></p><p><span style=\"font-size: 14px;\"><br/></span></p><p style=\"text-align: center;\"><span style=\"font-size: 14px;\"><img src=\"https://duxinggj-2018-1251133427.cos.ap-guangzhou.myqcloud.com/68add2de-03ed-48c7-ae1c-9cc925f23c9f.jpg\" title=\"\" alt=\"\"/></span></p><p><br/></p><p style=\"text-align: center;\"><span style=\"font-size: 14px;\">店铺主营类目及类目细项</span></p><p style=\"text-align: center;\"><span style=\"font-size: 14px;\">创建店铺时，请根据店铺主营方向选择一个主营类目，跨类目经营有赞暂无相关限制。</span></p><p style=\"text-align: center;\"><span style=\"font-size: 14px;\">点击图片可查看大图</span></p><p><span style=\"font-size: 14px;\"><br/></span></p><p style=\"text-align: center;\"><span style=\"font-size: 14px;\"><img src=\"https://duxinggj-2018-1251133427.cos.ap-guangzhou.myqcloud.com/5b638a5a-9878-40f8-8cd4-355fd982ece6.jpg\" title=\"\" alt=\"\"/></span></p><p><br/></p>','1558109322654','o665p',0),(14,'我的微信','<p><br/></p><h1 style=\"text-align: center;\"><span style=\"color: rgb(255, 0, 0);\">我的微信</span></h1><p><br/></p><p><img src=\"https://duxinggj-2018-1251133427.cos.ap-guangzhou.myqcloud.com/753f10d7-a143-4b6c-934b-12d059857dd8.jpg\" title=\"\" alt=\"\" width=\"787\" height=\"896\"/></p>','1558109329156','o665p',0),(15,'测试','<p><img src=\"https://duxinggj-2018-1251133427.cos.ap-guangzhou.myqcloud.com/2d817f7b-e272-40c4-b0f2-f3fd0d077190.jpg\" title=\"\" alt=\"\"/><img src=\"https://duxinggj-2018-1251133427.cos.ap-guangzhou.myqcloud.com/79f45cc1-c6be-4efc-9c58-b00e88fa0b78.jpg\" title=\"\" alt=\"\"/></p>','1558109335505','o665p',0),(16,'dsfds','<p>dsfdsf</p>','1558109314203','o665p',NULL),(17,'dsfdsf','<p>dsfdsfds</p>','1558109300386','o665p',NULL);
+insert  into `article`(`id`,`title`,`text`,`addtime`,`fabiaoren`,`liulan`) values (10,'店铺发布商品后台类目所含的子类目','<p><span style=\"font-size: 14px;\">选错类目会影响：</span></p><p><span style=\"font-size: 14px;\">1：影响商品转化率&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p><p><span style=\"font-size: 14px;\">2：影响店铺交易额&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p><p><span style=\"font-size: 14px;\">3：影响分销商品市场搜索精准率&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p><p><span style=\"font-size: 14px;\">4：影响分销商品市场商品曝光度&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p><p><span style=\"font-size: 14px;\">为了避免大家发错或不确定所发布商品对应的后台大类目，下表列举当前后台类目所包含的明细子类目（举例说明：我要发布苹果这类商品，苹果属于水果，水果又被包含在食品这个大类目下，那么发布商品选择的对应后台类目就是食品），请参照发布。</span></p><p><br/></p><p style=\"text-align: center;\"><span style=\"font-size: 14px;\">另：如有新增或调整，我们会第一时间更新！</span></p><p style=\"text-align: center;\"><span style=\"font-size: 14px;\">点击图片可查看大图</span></p><p><span style=\"font-size: 14px;\"><br/></span></p><p style=\"text-align: center;\"><span style=\"font-size: 14px;\"><img src=\"https://duxinggj-2018-1251133427.cos.ap-guangzhou.myqcloud.com/68add2de-03ed-48c7-ae1c-9cc925f23c9f.jpg\" title=\"\" alt=\"\"/></span></p><p><br/></p><p style=\"text-align: center;\"><span style=\"font-size: 14px;\">店铺主营类目及类目细项</span></p><p style=\"text-align: center;\"><span style=\"font-size: 14px;\">创建店铺时，请根据店铺主营方向选择一个主营类目，跨类目经营有赞暂无相关限制。</span></p><p style=\"text-align: center;\"><span style=\"font-size: 14px;\">点击图片可查看大图</span></p><p><span style=\"font-size: 14px;\"><br/></span></p><p style=\"text-align: center;\"><span style=\"font-size: 14px;\"><img src=\"https://duxinggj-2018-1251133427.cos.ap-guangzhou.myqcloud.com/5b638a5a-9878-40f8-8cd4-355fd982ece6.jpg\" title=\"\" alt=\"\"/></span></p><p><br/></p>','1558109322654','o665p',0),(14,'我的微信','<p><br/></p><h1 style=\"text-align: center;\"><span style=\"color: rgb(255, 0, 0);\">我的微信</span></h1><p><br/></p><p><img src=\"https://duxinggj-2018-1251133427.cos.ap-guangzhou.myqcloud.com/753f10d7-a143-4b6c-934b-12d059857dd8.jpg\" title=\"\" alt=\"\" width=\"787\" height=\"896\"/></p>','1558109329156','o665p',0),(15,'测试','<p><img src=\"https://duxinggj-2018-1251133427.cos.ap-guangzhou.myqcloud.com/2d817f7b-e272-40c4-b0f2-f3fd0d077190.jpg\" title=\"\" alt=\"\"/><img src=\"https://duxinggj-2018-1251133427.cos.ap-guangzhou.myqcloud.com/79f45cc1-c6be-4efc-9c58-b00e88fa0b78.jpg\" title=\"\" alt=\"\"/></p>','1558109335505','o665p',0);
 
 /*Table structure for table `dpxx` */
 
@@ -64,11 +64,11 @@ CREATE TABLE `dxtupian` (
   `path` text collate utf8_bin,
   `addTime` char(99) collate utf8_bin default NULL,
   KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 /*Data for the table `dxtupian` */
 
-insert  into `dxtupian`(`id`,`name`,`path`,`addTime`) values (1,'QQ图片20181010165508.jpg','https://duxinggj-2018-1251133427.cos.ap-guangzhou.myqcloud.com/3db65175-af5e-4059-9e8a-817624d0da0b.jpg','1560491507945'),(2,'未标题-1.jpg','https://duxinggj-2018-1251133427.cos.ap-guangzhou.myqcloud.com/59073d4e-6cc0-4917-96e1-3e3836bb46a2.jpg','1560492022505');
+insert  into `dxtupian`(`id`,`name`,`path`,`addTime`) values (1,'QQ图片20181010165508.jpg','https://duxinggj-2018-1251133427.cos.ap-guangzhou.myqcloud.com/3db65175-af5e-4059-9e8a-817624d0da0b.jpg','1560491507945'),(2,'未标题-1.jpg','https://duxinggj-2018-1251133427.cos.ap-guangzhou.myqcloud.com/59073d4e-6cc0-4917-96e1-3e3836bb46a2.jpg','1560492022505'),(3,'banner.jpg','https://duxinggj-2018-1251133427.cos.ap-guangzhou.myqcloud.com/e30a22e7-a47f-44be-a317-72a5b2369b25.jpg','1560590307476');
 
 /*Table structure for table `fenlei` */
 
@@ -77,13 +77,49 @@ DROP TABLE IF EXISTS `fenlei`;
 CREATE TABLE `fenlei` (
   `id` int(11) NOT NULL auto_increment,
   `name` char(99) collate utf8_bin default NULL COMMENT '分类名称',
+  `url` text collate utf8_bin,
   `addtime` char(99) collate utf8_bin default NULL COMMENT '添加时间',
   KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 /*Data for the table `fenlei` */
 
-insert  into `fenlei`(`id`,`name`,`addtime`) values (42,'裤子','1558110711755'),(43,'上衣','1558110733046'),(44,'科技','1558110751137'),(45,'电脑','1558110756177'),(46,'化妆品','1558110765529'),(47,'内衣','1558111241488');
+insert  into `fenlei`(`id`,`name`,`url`,`addtime`) values (1,'分类1','https://duxinggj-2018-1251133427.cos.ap-guangzhou.myqcloud.com/3db65175-af5e-4059-9e8a-817624d0da0b.jpg','1571583223884'),(2,'分类2','https://duxinggj-2018-1251133427.cos.ap-guangzhou.myqcloud.com/3db65175-af5e-4059-9e8a-817624d0da0b.jpg','1571584144048');
+
+/*Table structure for table `fenleier` */
+
+DROP TABLE IF EXISTS `fenleier`;
+
+CREATE TABLE `fenleier` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` char(99) collate utf8_bin default NULL,
+  `url` text collate utf8_bin,
+  `fj` int(11) default NULL,
+  `addtime` char(99) collate utf8_bin default NULL,
+  KEY `id` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10007 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+/*Data for the table `fenleier` */
+
+insert  into `fenleier`(`id`,`name`,`url`,`fj`,`addtime`) values (10001,'2-1','https://duxinggj-2018-1251133427.cos.ap-guangzhou.myqcloud.com/3db65175-af5e-4059-9e8a-817624d0da0b.jpg',2,'1571586120807'),(10002,'2-2','https://duxinggj-2018-1251133427.cos.ap-guangzhou.myqcloud.com/3db65175-af5e-4059-9e8a-817624d0da0b.jpg',2,'1571586123900'),(10003,'2-3','https://duxinggj-2018-1251133427.cos.ap-guangzhou.myqcloud.com/3db65175-af5e-4059-9e8a-817624d0da0b.jpg',2,'1571586126184'),(10004,'2-4','https://duxinggj-2018-1251133427.cos.ap-guangzhou.myqcloud.com/3db65175-af5e-4059-9e8a-817624d0da0b.jpg',2,'1571586129732'),(10005,'1-1','https://duxinggj-2018-1251133427.cos.ap-guangzhou.myqcloud.com/3db65175-af5e-4059-9e8a-817624d0da0b.jpg',1,'1571587498073'),(10006,'1-2','https://duxinggj-2018-1251133427.cos.ap-guangzhou.myqcloud.com/3db65175-af5e-4059-9e8a-817624d0da0b.jpg',1,'1571587501207');
+
+/*Table structure for table `fenleisan` */
+
+DROP TABLE IF EXISTS `fenleisan`;
+
+CREATE TABLE `fenleisan` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` char(99) collate utf8_bin default NULL,
+  `url` text collate utf8_bin,
+  `fj` int(11) default NULL,
+  `fjs` int(11) default NULL,
+  `addtime` char(99) collate utf8_bin default NULL,
+  KEY `id` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=100005 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+/*Data for the table `fenleisan` */
+
+insert  into `fenleisan`(`id`,`name`,`url`,`fj`,`fjs`,`addtime`) values (100001,'2-4-1','',2,10004,'1571586876941'),(100002,'2-4-2','',2,10004,'1571586883064'),(100003,'2-1-1','',2,10001,'1571586902928'),(100004,'2-1-2','',2,10001,'1571586905869');
 
 /*Table structure for table `imgku` */
 
@@ -140,7 +176,7 @@ CREATE TABLE `user_info` (
   `token` text collate utf8_bin,
   `userId` char(99) collate utf8_bin default NULL,
   KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 /*Data for the table `user_info` */
 
