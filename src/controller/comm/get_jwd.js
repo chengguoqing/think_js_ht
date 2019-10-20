@@ -4,14 +4,14 @@ var request = require('request');
 module.exports = class extends Base {
     async indexAction() {
         var date_s = this.ctx.post()
-        date_s = JSON.parse(this.decryption(date_s.token))
+        //date_s = JSON.parse(this.decryption(date_s.token))
 
         var assr_d = await this.get_url(date_s.address)
   
         var sd_ddf = {}
         sd_ddf.code = 0
         sd_ddf.msg = "success"
-        sd_ddf.data = this.encryption(JSON.stringify(assr_d))
+        sd_ddf.data = assr_d
 
 
         return this.fail(sd_ddf); //2输出json 推荐

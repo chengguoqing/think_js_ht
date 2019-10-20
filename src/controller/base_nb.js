@@ -6,7 +6,7 @@ var xml2js = require('xml2js');
 module.exports = class extends think.Controller {
     __before() {
 
-            this.assign('base_url', 'https://duxinggj.com/www/static/');
+        this.assign('base_url', 'https://duxinggj.com/www/static/');
         //        if (this.ctx.url != "/admin/loadin" && !this.cookie('user_id')) {
         //            return this.fail({
         //                code: -1,
@@ -63,8 +63,11 @@ module.exports = class extends think.Controller {
         var jhde = {}
         var data = ""
         delete cz_er.type
-        console.log(cz_er);
-        if (cz_er.page && cz_er.name) { //有分页的查询 且有分页查询
+        if (cz_er.fj) { //根据父级查询的
+            data = await model.page(cz_er.page).order('id DESC').where({
+                fj: cz_er.fj
+            }).countSelect();
+        } else if (cz_er.page && cz_er.name) { //有分页的查询 且有分页查询
             data = await model.page(cz_er.page).order('id DESC').where({
                 name: ['like', `%${cz_er.name||""}%`]
             }).countSelect();
@@ -79,11 +82,10 @@ module.exports = class extends think.Controller {
                 id: cz_er.id
             }).find();
         }
-        console.log(JSON.stringify(cz_er));
         var sd_ddf = {}
         sd_ddf.code = 0
         sd_ddf.msg = "success"
-        sd_ddf.data = this.encryption(JSON.stringify(data))
+        sd_ddf.data = data
         return sd_ddf
     }
 
@@ -145,21 +147,21 @@ module.exports = class extends think.Controller {
         }
         return pwd;
     }
-     
-       //    随便机数
+
+    //    随便机数
     randomString_wei() {
-       var len = 8;
+        var len = 8;
         var $chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678'; /****默认去掉了容易混淆的字符oOLl,9gq,Vv,Uu,I1****/
         var maxPos = $chars.length;
         var pwd = '';
         for (var i = 0; i < len; i++) {
             pwd += $chars.charAt(Math.floor(Math.random() * maxPos));
         }
-        pwd+=new Date().getTime()
+        pwd += new Date().getTime()
         return pwd;
     }
-    
-    
+
+
     zx(data) {
         var stringA = Object.keys(data),
             s_sdfs = ""
