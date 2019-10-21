@@ -1,4 +1,4 @@
-const Base = require('../base.js');
+const Base = require('../base_nb.js');
 const tengxun_sc = require('../../util/tengxun_sc.js');
 const fs = require('fs');
 const path = require('path');
