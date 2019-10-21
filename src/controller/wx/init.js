@@ -1,4 +1,4 @@
-const Base = require('../base.js');
+const Base = require('../base_nb.js')
 var appid = 'wxf8b0c920900b2663',
     secret = '299c6ab8cf95731ea90f9d28e6b150ce',
     ticketUrl = "https://api.weixin.qq.com/cgi-bin/token",
