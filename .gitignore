@@ -1,7 +1,9 @@
 # Logs
 logs
 *.log
-
+app/
+.app
+.app/
 # Runtime data
 pids
 *.pid
