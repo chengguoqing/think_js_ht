@@ -49,7 +49,7 @@ module.exports = class extends think.Controller {
             jhde.code = -1
             jhde.msg = '修改失败'
         } else {
-            jhde.code = 0
+            jhde.code = 1
             jhde.msg = '修改成功'
         }
         return jhde

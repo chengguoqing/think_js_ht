@@ -14,7 +14,6 @@ module.exports = class extends Base {
         } else if (date_s.type == 2) {
             sd_der = await this.xg_action('fenlei', date_s)
         } else if (date_s.type == 3) {
-            console.log(date_s.tabname);
             sd_der = await this.get_action(date_s.tabname, date_s)
 
         } else if (date_s.type == 4) {
