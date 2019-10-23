@@ -182,6 +182,30 @@ CREATE TABLE `user_info` (
 
 insert  into `user_info`(`id`,`touxiang`,`user_name`,`user_paw`,`dengji`,`addtime`,`token`,`userId`) values (19,'https://duxinggj-2018-1251133427.cos.ap-guangzhou.myqcloud.com/3db65175-af5e-4059-9e8a-817624d0da0b.jpg','admin','kiss1001',1,'1560491993939','i/UDpVbUii7H68UrDKSC34u2Ri7Rb6n5n7uDdYjsPMLa1gIAFyWMqY2Zpdu1dABOvfknNcF5mPRAqFML58DWLIQorZttt1ZxmnlI/2Cx/Lu/JTH+jlENZg==','Hhjp5EGa1560491964083'),(20,'https://duxinggj-2018-1251133427.cos.ap-guangzhou.myqcloud.com/59073d4e-6cc0-4917-96e1-3e3836bb46a2.jpg','o665p','kiss1001',1,'1560492031615','C7f+Mab+H2oaCfSlIhrs18ctkK5+kIBWk+e1aIlS7RVDnCv70Gz30DHxckZz4sy1ZPEBatTnuC8Th29RMzHRgYoTqheE8hWOOFc8l4Ni67q1gL8tBwzZ5Q==','hp4a25Ze1560492031615');
 
+/*Table structure for table `wxuser` */
+
+DROP TABLE IF EXISTS `wxuser`;
+
+CREATE TABLE `wxuser` (
+  `id` int(11) NOT NULL auto_increment COMMENT '微信的用户信息',
+  `openid` char(99) collate utf8_bin default NULL,
+  `nickname` char(99) collate utf8_bin default NULL COMMENT '昵称',
+  `headimgurl` text collate utf8_bin COMMENT '头像',
+  `country` char(99) collate utf8_bin default NULL COMMENT '国家',
+  `province` char(99) collate utf8_bin default NULL COMMENT '省份',
+  `city` char(99) collate utf8_bin default NULL COMMENT '城市',
+  `sex` char(3) collate utf8_bin default NULL COMMENT '性别 1男',
+  `dengji` int(6) default '0' COMMENT '等级',
+  `jifen` int(6) default '0' COMMENT '积分',
+  `phone` char(13) collate utf8_bin default NULL COMMENT '电话',
+  `addtime` char(99) collate utf8_bin default NULL COMMENT '添加时间',
+  KEY `id` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+/*Data for the table `wxuser` */
+
+insert  into `wxuser`(`id`,`openid`,`nickname`,`headimgurl`,`country`,`province`,`city`,`sex`,`dengji`,`jifen`,`phone`,`addtime`) values (2,'oWstq0f6bihK8sB84gz4UyOxBuII','独行工匠','http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqq1wLZcODakm2UokH6o3A99N1JJ199M0uibSbOOpngiaGA032FibS7zn0kyFGoMFxJCVSJribqZTZgTQ/132','中国','广东','深圳','1',0,0,NULL,'1571629446370');
+
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;

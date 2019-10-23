@@ -4,7 +4,7 @@ module.exports = class extends Base {
     async indexAction() {
         let model = this.model('user_info'),
             date_s = this.ctx.post()
-        date_s = JSON.parse(this.decryption(date_s.token))
+//        date_s = JSON.parse(this.decryption(date_s.token))
         let data = await model.where({
             user_name: date_s.user_name,
             user_paw: date_s.user_paw
