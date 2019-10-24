@@ -4,8 +4,7 @@ var request = require('request');
 //获取经纬度
 module.exports = class extends Base {
     async indexAction() {
-        var date_s = this.ctx.post()
-        this.ctx.redirect('https://xiaodou.f.yunzhonghe.com/pay/view?topOrderNo='+this.ctx.query.topOrderNo);
+          return this.fail(); //2输出json 推荐
     }
 
 };

@@ -19,6 +19,12 @@ module.exports = class extends Base {
             }catch(e){
                 
             }
+            let ssde = Object.keys(sd_der.data)
+            if(ssde.length<=0){
+                sd_der.code = -1
+                sd_der.msg = "暂无数据"
+            }
+            
         } else if (date_s.type == 4) {
             sd_der = await this.del_action('spxq', date_s)
         }
