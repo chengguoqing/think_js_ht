@@ -13,7 +13,7 @@ module.exports = class extends Base {
         let data = await model.order('id DESC').select();
         for (let i = 0; i < data.length; i++) {
             data[i].code = 0
-            data[i].value = data[i].id
+            data[i].value = data[i].name
             data[i].label = data[i].name
             data[i].children = []
             let datas = await modeler.order('id DESC').where({
@@ -21,7 +21,7 @@ module.exports = class extends Base {
             }).select();
             for (let j = 0; j < datas.length; j++) {
                 datas[j].code = 1
-                datas[j].value = datas[j].id
+                datas[j].value = datas[j].name
                 datas[j].label = datas[j].name
                 datas[j].children = []
                 data[i].children.push(datas[j])
@@ -30,7 +30,7 @@ module.exports = class extends Base {
                 }).select();
                 for (let x = 0; x < datassan.length; x++) {
                     datassan[x].code = 2
-                    datassan[x].value = datassan[x].id
+                    datassan[x].value = datassan[x].name
                     datassan[x].label = datassan[x].name
                     datas[j].children.push(datassan[x])
                 }

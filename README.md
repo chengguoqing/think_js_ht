@@ -1,6 +1,7 @@
 
-Application created by [ThinkJS](http://www.thinkjs.org)
-
+#独行工匠工作室
+###code = -1 错误 0正确  1弹出信息框
+###msg统一返回执行信息
 ## Install dependencies
 
 ```
