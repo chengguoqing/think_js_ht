@@ -17,7 +17,7 @@
     "gm": "^1.23.1",
     "graphicsmagick": "^0.0.1",
     "images": "^3.0.2",
-    "md5": "^2.2.1",
+    "md5": "D:\\��̨\\thinkjser>\"node\"  \"C:\\Users\\yzh0038.YUNZHONGHE\\AppData\\Roaming\\npm\\\\node_modules\\npm\\bin\\npm-cli.js\" config get save-prefix \r\n^2.2.1",
     "memory-cache": "^0.2.0",
     "node-webshot": "^1.0.3",
     "phantom": "^6.2.0",
@@ -38,7 +38,7 @@
     "ueditor": "^1.2.3",
     "webpage": "^0.3.0",
     "webshot": "^0.18.0",
-    "xml2js": "^0.4.19"
+    "xml2js": "D:\\��̨\\thinkjser>\"node\"  \"C:\\Users\\yzh0038.YUNZHONGHE\\AppData\\Roaming\\npm\\\\node_modules\\npm\\bin\\npm-cli.js\" config get save-prefix \r\n^0.4.22"
   },
   "devDependencies": {
     "ava": "^0.18.0",
