@@ -11,7 +11,7 @@ module.exports = class extends think.Controller {
         //            return this.fail({
         //                code: -1,
         //                msg: "登录过期请重新登录"
-        //            }); //2输出json 推荐
+        //            }); //2输出json 推荐 
         //        }
 
     }
@@ -24,7 +24,14 @@ module.exports = class extends think.Controller {
         if (leisd) { //有条件的话就不能添加重复的
             result = await model.thenAdd(cz_er, leisd);
         } else {
-            result = await model.add(cz_er);
+            try {
+                result = await model.add(cz_er);
+            } catch (e) {
+                jhde.code = -1
+                jhde.msg = '添加失败'
+                return jhde
+            }
+
         }
         if (result.type == "exist") { //已存在
             jhde.code = -1
@@ -49,7 +56,7 @@ module.exports = class extends think.Controller {
             jhde.code = -1
             jhde.msg = '修改失败'
         } else {
-            jhde.code = 1
+            jhde.code = 0
             jhde.msg = '修改成功'
         }
         return jhde

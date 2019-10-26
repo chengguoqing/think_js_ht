@@ -41,15 +41,18 @@ module.exports = class extends Base {
                 openid: asdd_b.openid
             })
         }
-        delete asdd_b.openid
-        return this.json(asdd_b)
+        let eererrid = await this.model('wxuser').where({
+            openid: asdd_b.openid
+        }).find();
+        delete eererrid.openid
+        return this.json(eererrid)
 
     }
     //    微信支付
     async zhifuAction() {
         var date_s = this.ctx.query
         let data = await this.model('wxuser').where({
-            id: 2
+            id: date_s.userid
         }).find();
         let openid = data.openid
         var sd_sdf = {}

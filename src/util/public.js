@@ -28,6 +28,19 @@ exports.randomString = function (len) {
 }
 
 
+exports.random_No = function (len) {
+    len = len || 16;
+    var $chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678'; /****默认去掉了容易混淆的字符oOLl,9gq,Vv,Uu,I1****/
+    var maxPos = $chars.length;
+    var pwd = '';
+    for (i = 0; i < len; i++) {
+        pwd += $chars.charAt(Math.floor(Math.random() * maxPos));
+    }
+    random_no =   pwd+new Date().getTime();
+    return random_no;
+};
+
+
 exports.buildXML = function (json) {
     var builder = new xml2js.Builder();
     return builder.buildObject(json);

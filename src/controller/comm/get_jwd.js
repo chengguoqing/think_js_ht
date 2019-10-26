@@ -6,7 +6,7 @@ module.exports = class extends Base {
         var date_s = this.ctx.post()
         //date_s = JSON.parse(this.decryption(date_s.token))
 
-        var assr_d = await this.get_url(date_s.address)
+        var assr_d = await this.get_url(encodeURIComponent(date_s.address))
   
         var sd_ddf = {}
         sd_ddf.code = 0
@@ -19,7 +19,7 @@ module.exports = class extends Base {
     get_url(address) {
         return new Promise((resolve, reject) => {
             request('https://restapi.amap.com/v3/geocode/geo?key=1ca50beb27f893268297a00cdb0acdf3&address=' + address, function (error, resp, json) {
-
+                console.log(address);
                 resolve(JSON.parse(json));
             })
         })
