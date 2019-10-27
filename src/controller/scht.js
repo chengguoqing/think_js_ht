@@ -66,7 +66,7 @@ module.exports = class extends Base {
             ssder.jydh = cz.jydh
         }
 
-        let data = await this.model('xiadanlist').page(cz.page).order('xiadanlist.id DESC').where(ssder).join('wxuser ON wxuser.id=xiadanlist.userid').countSelect();
+        let data = await this.model('xiadanlist').page(cz.page).order('xiadanlist.id DESC').where(ssder).join('wxuser ON wxuser.id=xiadanlist.userid').countSelect()
         let ssdee = await this.model('xiadanlist').sum('zongjia');
         data.data.map(a => {
             a.zongjia = '￥' + parseFloat(a.zongjia).toFixed(2)

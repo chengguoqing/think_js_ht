@@ -35,6 +35,7 @@ module.exports = class extends Base {
         let data = await this.model('spxq').page(cz.page).order(ssde).where(ssdeer).countSelect();
         data.data.map(a => {
             a.fm = a.spt.split(",")[0]
+            a.jiage = parseFloat(a.jiage).toFixed(2)
         })
         let dateer = {}
         dateer.code = 0
@@ -73,9 +74,13 @@ module.exports = class extends Base {
             id: cz.id
         }).find();
         data.spt = data.spt.split(",")
+        data.jiage = parseFloat(data.jiage).toFixed(2)
         data.sd_drtyx = JSON.parse(data.sd_drtyx)
         data.sd_drtyx.map(a => {
             a.cls = ""
+            a.jiage = parseFloat(a.jiage).toFixed(2)
+            a.cbjia= parseFloat(a.cbjia).toFixed(2)
+            
         })
         data.issc = shoucs.issc || 1
         let dateer = {}
@@ -202,6 +207,7 @@ module.exports = class extends Base {
         data.data.map(a => {
             a.zftypetext = ssdder[a.zftypecode - 1]
             a.jiagegm = parseFloat(a.jiagegm).toFixed(2)
+            a.danjie = a.danjie.toFixed(2)
         })
         let dateer = {}
         dateer.code = 0
