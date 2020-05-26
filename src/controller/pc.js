@@ -8,4 +8,15 @@ module.exports = class extends think.Controller {
         ssr_dr.secret = '189e0d0d1ccb64c1d81650f5782b1048'
         return ssr_dr
     }
+       //    随便机数
+    randomString(len) {
+        len = len || 32;
+        var $chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678'; /****默认去掉了容易混淆的字符oOLl,9gq,Vv,Uu,I1****/
+        var maxPos = $chars.length;
+        var pwd = '';
+        for (var i = 0; i < len; i++) {
+            pwd += $chars.charAt(Math.floor(Math.random() * maxPos));
+        }
+        return pwd;
+    }
 };

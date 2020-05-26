@@ -12,8 +12,6 @@ module.exports = class extends Base {
         sd_ddf.code = 0
         sd_ddf.msg = "success"
         sd_ddf.data = assr_d
-
-
         return this.fail(sd_ddf); //2输出json 推荐
     }
     get_url(address) {

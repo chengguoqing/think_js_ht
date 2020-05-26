@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>深圳时尚家居设计周</title>
+    <base href="https://testcheng.oss-cn-shanghai.aliyuncs.com/testpaizao/">
+    <link href="css/base.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .jjnerrte.act .jhgbhert {
+            display: none
+        }
+        .jjnerrte.act img{
+            display: block !important
+        }
+    </style>
+</head>
+
+<body>
+    <!--    a1 第一步   a2第二步 ....-->
+    <div class="cen pd pt40 row hhghdft a2">
+        <div class="col row">
+            <span class="fz36 fgtyte">1</span>
+            <div class="pl5">
+                <i class="f_i jjhnedrrt aa"></i>
+                <p class="fz12">
+                    选择行业
+                </p>
+            </div>
+        </div>
+        <div class="col row">
+            <span class="fz36 fgtyte">2</span>
+            <div class="pl5">
+                <i class="f_i jjhnedrrt ab"></i>
+                <p class="fz12">
+                    拍名片
+                </p>
+            </div>
+        </div>
+        <div class="col row">
+            <span class="fz36 fgtyte">3</span>
+            <div class="pl5">
+                <i class="f_i jjhnedrrt ac"></i>
+                <p class="fz12">
+                    拍人脸
+                </p>
+            </div>
+        </div>
+        <div class="col row">
+            <span class="fz36 fgtyte">4</span>
+            <div class="pl5">
+                <i class="f_i jjhnedrrt ad"></i>
+                <p class="fz12">
+                    登录成功
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="jjhhnsdrert">
+        <!--    第一步-->
+        <div class="fgfdgdftyy"></div>
+        <!--    第二步-->
+        <div class="mt20 cen fgfdgdftyy act">
+            <p class="cf fz26">
+                请拍摄您的名片
+            </p>
+            <p class="fz12 cf">
+                拍名片，快速上传信息
+            </p>
+            <div class="jjnerrte mt10 ">
+                <div class="jhgbhert">
+                    <div class="cz fgtteert">
+                        <i class="f_i addicon"></i>
+                        <p class="fz12 ls ">
+                            点击上传名片正面
+                        </p>
+                    </div>
+                </div>
+                <img src="" class="w100 h100 sdfgdyxer">
+            </div>
+
+            <div class="jjnerrte mt10">
+                <div class="jhgbhert">
+                    <div class="cz fgtteert">
+                        <i class="f_i addicon"></i>
+                        <p class="fz12 ls ">
+                            点击上传名片反面
+                        </p>
+                    </div>
+                </div>
+                <img src="" class="w100 h100 sdfgdyxer">
+            </div>
+
+            <div class="mt40">
+                <button class="jhhddrrt">没有名片，需要手动填写</button>
+            </div>
+        </div>
+        <!--    第三步-->
+        <div class="mt20 cen fgfdgdftyy ">
+            <p class="cf fz26">
+                请拍摄您的人脸
+            </p>
+            <div class="jjnerrte mt10 ab">
+                <div class="jhgbhert">
+                    <div class="cz fgtteert">
+                        <i class="f_i addicon"></i>
+                        <p class="fz12 ls ">
+                            点击上传名片正面
+                        </p>
+                    </div>
+                </div>
+                <img src="" class="w100 h100 sdfgdyxer">
+            </div>
+
+        </div>
+        <!--    第四步-->
+        <div class="fgfdgdftyy"></div>
+
+    </div>
+
+    <div class="kjhhderrt">
+        <div class="kjnderrttyt ls fz12 cen pt10">
+            咨询热线：400-873-9129<br>
+            2020.08.20-23 深圳国际会展中心(宝安区)<br>
+            开发时间：上午9:00-下午5:00
+        </div>
+    </div>
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jweixin-1.6.0.js"></script>
+    <script>
+        /*
+         * 注意：
+         * 1. 所有的JS接口只能在公众号绑定的域名下调用，公众号开发者需要先登录微信公众平台进入“公众号设置”的“功能设置”里填写“JS接口安全域名”。
+         * 2. 如果发现在 Android 不能分享自定义内容，请到官网下载最新的包覆盖安装，Android 自定义分享接口需升级至 6.0.2.58 版本及以上。
+         * 3. 常见问题及完整 JS-SDK 文档地址：http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html
+         *
+         * 开发中遇到问题详见文档“附录5-常见错误及解决办法”解决，如仍未能解决可通过以下渠道反馈：
+         * 邮箱地址：weixin-open@qq.com
+         * 邮件主题：【微信JS-SDK反馈】具体问题
+         * 邮件内容说明：用简明的语言描述问题所在，并交代清楚遇到该问题的场景，可附上截屏图片，微信团队会尽快处理你的反馈。
+         */
+        wx.config({
+            debug: false,
+            appId: '{{appId}}',
+            timestamp: '{{timestamp}}',
+            nonceStr: '{{nonceStr}}',
+            signature: '{{signature}}',
+            jsApiList: [
+                'checkJsApi',
+                'onMenuShareTimeline',
+                'onMenuShareAppMessage',
+                'onMenuShareQQ',
+                'onMenuShareWeibo',
+                'onMenuShareQZone',
+                'hideMenuItems',
+                'showMenuItems',
+                'hideAllNonBaseMenuItem',
+                'showAllNonBaseMenuItem',
+                'translateVoice',
+                'startRecord',
+                'stopRecord',
+                'onVoiceRecordEnd',
+                'playVoice',
+                'onVoicePlayEnd',
+                'pauseVoice',
+                'stopVoice',
+                'uploadVoice',
+                'downloadVoice',
+                'chooseImage',
+                'previewImage',
+                'uploadImage',
+                'downloadImage',
+                'getNetworkType',
+                'openLocation',
+                'getLocation',
+                'hideOptionMenu',
+                'showOptionMenu',
+                'closeWindow',
+                'scanQRCode',
+                'chooseWXPay',
+                'openProductSpecificView',
+                'addCard',
+                'chooseCard',
+                'openCard'
+            ]
+        });
+
+        wx.ready(function() {
+            $(".hhghdft .col.row").on("click", function() {
+                $(".hhghdft").removeClass("a1")
+                $(".hhghdft").removeClass("a2")
+                $(".hhghdft").removeClass("a3")
+                $(".hhghdft").removeClass("a4")
+                $(".hhghdft").addClass("a" + (parseInt($(this).index()) + 1))
+                $(".fgfdgdftyy").removeClass("act").eq($(this).index()).addClass("act")
+            })
+            $(".jjnerrte").on("click", function() {
+                var th = $(this)
+                wx.chooseImage({
+                    sourceType: ['camera'], // 可以指定来源是相册还是相机，默认二者都有
+                    success: function(res) {
+                        $(th).find("img").attr("src", res.localIds[0])
+                        $(th).addClass("act")
+                    }
+                });
+            })
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,6 +1,7 @@
 const Base = require('../base_nb.js');
 var request = require('request');
 var md5 = require('md5');
+var sha1 = require('sha1')
 var xml2js = require('xml2js');
 //微信支付的签名 
 module.exports = class extends Base {

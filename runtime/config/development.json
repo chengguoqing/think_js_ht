@@ -21,7 +21,7 @@
     "type": "file",
     "file": {
       "timeout": 86400000,
-      "cachePath": "D:\\后台\\thinkjser\\runtime\\cache",
+      "cachePath": "D:\\thinkjs\\think_js_ht\\runtime\\cache",
       "pathDepth": 1,
       "gcInterval": 86400000
     }
@@ -47,13 +47,13 @@
       "cookie": {
         "name": "thinkjs"
       },
-      "sessionPath": "D:\\后台\\thinkjser\\runtime\\session"
+      "sessionPath": "D:\\thinkjs\\think_js_ht\\runtime\\session"
     }
   },
   "view": {
     "type": "nunjucks",
     "nunjucks": {
-      "viewPath": "D:\\后台\\thinkjser\\view",
+      "viewPath": "D:\\thinkjs\\think_js_ht\\view",
       "sep": "_",
       "extname": ".html"
     }
@@ -65,14 +65,14 @@
       "backups": 10,
       "absolute": true,
       "maxLogSize": 51200,
-      "filename": "D:\\后台\\thinkjser\\logs\\app.log"
+      "filename": "D:\\thinkjs\\think_js_ht\\logs\\app.log"
     },
     "dateFile": {
       "level": "ALL",
       "absolute": true,
       "pattern": "-yyyy-MM-dd",
       "alwaysIncludePattern": true,
-      "filename": "D:\\后台\\thinkjser\\logs\\app.log"
+      "filename": "D:\\thinkjs\\think_js_ht\\logs\\app.log"
     }
   }
 }
